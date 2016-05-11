@@ -11,16 +11,16 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="main-navbar">
+        <div class="collapse navbar-collapse" id="main-navbar" > <!-- ng-controller="setNav as nav" -->
 
             <!-- Left Navbar -->
 
             <div class="col-md-8" id="top_menu">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#"><img src="img/home_icon.png" alt=""/></a></li>
-                    <li><a href="#">Basic</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Intermediate <span class="fa"></span></a>
+                    <li ng-class="{ active:nav.isSelected(1) }"><a href="#" ng-click="nav.selectNav(1)">Basic</a></li>
+                    <li ng-class="{ active:nav.isSelected(2) }" class="dropdown">
+                        <a ng-click="nav.selectNav(2)" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Intermediate <span class="fa"></span></a>
                         <div class="dropdown-menu full-width-dropdown">
                             <div class="container">
                                 <div class="row">
@@ -31,7 +31,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <a href="#">Chords</a><br>
-                                                <span>Lorem ipsum dolor sit amet, nec an unum dictas. Sea exerci nullam ex, ad mel omittam legendos salutatus, eum ei regione sententiae. Cu eum odio nulla, et his nullam graece, tation alterum dolores cum ne.</span>
+                                                <span class="hidden-xs">Lorem ipsum dolor sit amet, nec an unum dictas. Sea exerci nullam ex, ad mel omittam legendos salutatus, eum ei regione sententiae. Cu eum odio nulla, et his nullam graece, tation alterum dolores cum ne.</span>
                                             </div>
                                         </div>
                                         <div class="row mb32">
@@ -40,7 +40,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <a href="scales">Scales</a><br>
-                                                <span>Lorem ipsum dolor sit amet, nec an unum dictas. Sea exerci nullam ex, ad mel omittam legendos salutatus, eum ei regione sententiae. Cu eum odio nulla, et his nullam graece, tation alterum dolores cum ne.</span>
+                                                <span class="hidden-xs">Lorem ipsum dolor sit amet, nec an unum dictas. Sea exerci nullam ex, ad mel omittam legendos salutatus, eum ei regione sententiae. Cu eum odio nulla, et his nullam graece, tation alterum dolores cum ne.</span>
                                             </div>
                                         </div>
                                         <div class="row mb32">
@@ -49,29 +49,51 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <a href="#">Technique</a><br>
-                                                <span>Lorem ipsum dolor sit amet, nec an unum dictas. Sea exerci nullam ex, ad mel omittam legendos salutatus, eum ei regione sententiae. Cu eum odio nulla, et his nullam graece, tation alterum dolores cum ne.</span>
+                                                <span class="hidden-xs">Lorem ipsum dolor sit amet, nec an unum dictas. Sea exerci nullam ex, ad mel omittam legendos salutatus, eum ei regione sententiae. Cu eum odio nulla, et his nullam graece, tation alterum dolores cum ne.</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
-                                        <ul>
-                                            <li><a href="#">Arpeggios</a></li>                            
-                                            <li><a href="#">Fretboard Knowledge</a></li>
-                                            <li><a href="#">Picking Techniques</a></li>
-                                        </ul>
+                                    <div class="col-md-6">
+                                        <div class="row mb32">
+                                            <div class="col-md-2">
+                                                <img src="img/categories/icon_chord.png" alt="" class="img img-responsive category-img hidden-xs"/>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <a href="#">Arpeggios</a><br>
+                                                <span class="hidden-xs">Lorem ipsum dolor sit amet, nec an unum dictas. Sea exerci nullam ex, ad mel omittam legendos salutatus, eum ei regione sententiae. Cu eum odio nulla, et his nullam graece, tation alterum dolores cum ne.</span>
+                                            </div>
+                                        </div>
+                                        <div class="row mb32">
+                                            <div class="col-md-2">
+                                                <img src="img/categories/icon_chord.png" alt="" class="img img-responsive category-img hidden-xs"/>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <a href="scales">Fretboard Knowledge</a><br>
+                                                <span class="hidden-xs">Lorem ipsum dolor sit amet, nec an unum dictas. Sea exerci nullam ex, ad mel omittam legendos salutatus, eum ei regione sententiae. Cu eum odio nulla, et his nullam graece, tation alterum dolores cum ne.</span>
+                                            </div>
+                                        </div>
+                                        <div class="row mb32">
+                                            <div class="col-md-2">
+                                                <img src="img/categories/icon_chord.png" alt="" class="img img-responsive category-img hidden-xs"/>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <a href="#">Picking Techniques</a><br>
+                                                <span class="hidden-xs">Lorem ipsum dolor sit amet, nec an unum dictas. Sea exerci nullam ex, ad mel omittam legendos salutatus, eum ei regione sententiae. Cu eum odio nulla, et his nullam graece, tation alterum dolores cum ne.</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <li>
-                            <a href="#">Advanced</a>
-                        </li>
-                        <li>
-                            <a href="#">Lick section</a>
-                        </li>
-                        <li ng-hide="header.user.loggedIn">
-                            <a href="#">Memberships</a>
-                        </li>
+                    </li>
+                    <li ng-class="{ active:nav.isSelected(3) }">
+                        <a href="#" ng-click="nav.selectNav(3)">Advanced</a>
+                    </li>
+                    <li ng-class="{ active:nav.isSelected(4) }">
+                        <a href="#" ng-click="nav.selectNav(4)">Lick section</a>
+                    </li>
+                    <li ng-class="{ active:nav.isSelected(5) }" ng-hide="header.user.loggedIn">
+                        <a href="#" ng-click="nav.selectNav(5)">Memberships</a>
                     </li>
                 </ul>
             </div>
@@ -79,18 +101,18 @@
             <!-- Right Navbar -->
 
             <div class="col-md-4" id="right_menu">
-                <ul class="nav navbar-nav navbar-right pull-right">
-                    <li><a href="#"><img src="img/search_icon.png" alt=""/></a></li>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden-xs"><a href="#"><img src="img/search_icon.png" alt=""/></a></li>
                     <li ng-hide="header.user.loggedIn" class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <img src="img/myaccount_icon.png" alt="" class="my-account"/>My account <span class="fa fa-angle-down"></span>
+                        <a ng-click="nav = 6" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <img src="img/myaccount_icon.png" alt="" class="my-account hidden-xs"/>My account <span class="fa fa-angle-down"></span>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Membership</a></li>
                             <li><a href="#">Payments</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" ng-click="nav = 7">Contact</a></li>
                 </ul>
             </div>
         </div><!-- /.navbar-collapse -->

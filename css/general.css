@@ -131,6 +131,14 @@ header #right_menu > ul li .full-width-dropdown {
   box-shadow: 0 0px 4px rgba(0, 0, 0, 0.175);
   padding: 30px;
 }
+@media (max-width: 767px) {
+  header #top_menu > ul li .full-width-dropdown,
+  header #right_menu > ul li .full-width-dropdown {
+    position: relative;
+    width: 100%;
+    box-shadow: none;
+  }
+}
 header #top_menu > ul li .full-width-dropdown .category-img,
 header #right_menu > ul li .full-width-dropdown .category-img {
   width: 200px;
@@ -143,4 +151,12 @@ header #top_menu > ul li .full-width-dropdown .category-img,
 header #right_menu > ul li .full-width-dropdown .category-img {
   width: 50px;
   padding-top: 15px;
+}
+header #right_menu {
+  float: right;
+}
+@media (max-width: 767px) {
+  header #right_menu {
+    float: left;
+  }
 }

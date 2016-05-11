@@ -132,6 +132,11 @@ header {
                 border-radius: 0;
                 box-shadow: 0 0px 4px rgba(0,0,0,.175);
                 padding: 30px;
+                @media (max-width: @screen-xs-max) {
+                    position: relative;
+                    width: 100%;
+                    box-shadow: none;
+                }
                 .category-img {
                     width: 200px;
                 }
@@ -146,5 +151,9 @@ header {
         }
     }
     #right_menu {
+        float: right;
+        @media (max-width: @screen-xs-max) {
+            float: left;
+        }
     }
 }
