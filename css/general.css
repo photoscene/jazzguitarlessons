@@ -1,0 +1,146 @@
+.mt32 {
+  margin-top: 32px;
+}
+.mb32 {
+  margin-bottom: 32px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+small {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+}
+a {
+  color: #D0021B;
+}
+a:hover {
+  color: #555555;
+  text-decoration: none;
+}
+header .navbar-default {
+  border: none;
+  border-bottom: 1px solid #D0021B;
+  background-color: #fff;
+  border-radius: 0;
+}
+@media (min-width: 768px) {
+  header .navbar-default .container-fluid,
+  header .navbar-default .container-fluid > .navbar-collapse {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+header #top_menu > ul .active > a,
+header #right_menu > ul .active > a {
+  background-color: transparent;
+  color: #D0021B;
+}
+@media (min-width: 768px) {
+  header #top_menu > ul li,
+  header #right_menu > ul li {
+    display: inline-block;
+    height: 60px;
+    position: static;
+    float: none;
+  }
+}
+header #top_menu > ul li a,
+header #right_menu > ul li a {
+  text-transform: uppercase;
+}
+header #top_menu > ul li a img,
+header #right_menu > ul li a img {
+  max-height: 30px;
+}
+header #top_menu > ul li a .my-account,
+header #right_menu > ul li a .my-account {
+  padding-right: 10px;
+}
+header #top_menu > ul li .dropdown-toggle .fa::before,
+header #right_menu > ul li .dropdown-toggle .fa::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: auto;
+  bottom: auto;
+  right: 0;
+  -ms-transform-origin: 50% 50% 0;
+  -webkit-transform-origin: 50% 50% 0;
+  -moz-transform-origin: 50% 50% 0;
+  transform-origin: 50% 50% 0;
+  -webkit-transition: all 300ms ease 0s;
+  -moz-transition: all 300ms ease 0s;
+  -o-transition: all 300ms ease 0s;
+  transition: all 300ms ease 0s;
+  width: 10px;
+  height: 1px;
+  background-color: black;
+  box-shadow: 0 1px 1px rgba(33, 49, 58, 0.1);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  right: 6.07px;
+}
+header #top_menu > ul li .dropdown-toggle .fa::after,
+header #right_menu > ul li .dropdown-toggle .fa::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: auto;
+  bottom: auto;
+  right: 0;
+  -ms-transform-origin: 50% 50% 0;
+  -webkit-transform-origin: 50% 50% 0;
+  -moz-transform-origin: 50% 50% 0;
+  transform-origin: 50% 50% 0;
+  -webkit-transition: all 300ms ease 0s;
+  -moz-transition: all 300ms ease 0s;
+  -o-transition: all 300ms ease 0s;
+  transition: all 300ms ease 0s;
+  width: 10px;
+  height: 1px;
+  background-color: #21313a;
+  box-shadow: 0 1px 1px rgba(33, 49, 58, 0.1);
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+header #top_menu > ul li .dropdown-toggle .fa::after:focus,
+header #right_menu > ul li .dropdown-toggle .fa::after:focus {
+  left: 115px;
+}
+header #top_menu > ul li .full-width-dropdown,
+header #right_menu > ul li .full-width-dropdown {
+  width: 100vw;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  float: left;
+  border-radius: 0;
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.175);
+  padding: 30px;
+}
+header #top_menu > ul li .full-width-dropdown .category-img,
+header #right_menu > ul li .full-width-dropdown .category-img {
+  width: 200px;
+}
+header #top_menu > ul li .full-width-dropdown li,
+header #right_menu > ul li .full-width-dropdown li {
+  height: auto;
+}
+header #top_menu > ul li .full-width-dropdown .category-img,
+header #right_menu > ul li .full-width-dropdown .category-img {
+  width: 50px;
+  padding-top: 15px;
+}
