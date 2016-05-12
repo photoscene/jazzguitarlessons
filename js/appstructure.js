@@ -27,6 +27,10 @@
         this.isSelected = function (checkNav){
             return this.nav === checkNav;
         };
+    })
+
+    .controller('mainCtrl', function(){
+        
     });
 
     var users = {
