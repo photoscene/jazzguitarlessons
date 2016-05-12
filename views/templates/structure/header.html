@@ -102,9 +102,9 @@
 
             <div class="col-md-4" id="right_menu">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden-xs"><a href="#"><img src="img/search_icon.png" alt=""/></a></li>
-                    <li ng-hide="header.user.loggedIn" class="dropdown">
-                        <a ng-click="nav = 6" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <li ng-class="{ active:nav.isSelected(6) }" class="hidden-xs"><a ng-click="nav.selectNav(6)" href="#"><img src="img/search_icon.png" alt=""/></a></li>
+                    <li ng-class="{ active:nav.isSelected(7) }" ng-hide="header.user.loggedIn" class="dropdown">
+                        <a ng-click="nav.selectNav(7)" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             <img src="img/myaccount_icon.png" alt="" class="my-account hidden-xs"/>My account <span class="fa fa-angle-down"></span>
                         </a>
                         <ul class="dropdown-menu">
@@ -112,7 +112,7 @@
                             <li><a href="#">Payments</a></li>
                         </ul>
                     </li>
-                    <li><a href="#" ng-click="nav = 7">Contact</a></li>
+                    <li ng-class="{ active:nav.isSelected(8) }"><a href="#" ng-click="nav.selectNav(8)">Contact</a></li>
                 </ul>
             </div>
         </div><!-- /.navbar-collapse -->
