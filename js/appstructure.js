@@ -18,6 +18,15 @@
             }],
             controllerAs: 'header' // this is the alias from this one: ng-controlles="headerCtrl as header"
         };
+    })
+
+    .controller('navCtrl', function(){
+        this.selectNav = function (setNav){
+            this.nav = setNav;
+        };
+        this.isSelected = function (checkNav){
+            return this.nav === checkNav;
+        };
     });
 
     var users = {
