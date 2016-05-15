@@ -2,9 +2,10 @@
     angular.module('guitarlessons')
     .config(function($routeProvider){
         $routeProvider
-        .when('/scales', { templateUrl: '/jazzguitarlessons.com/views/templates/intermediate/scales.html', })
-        .when('/chords', { templateUrl: '/jazzguitarlessons.com/views/templates/intermediate/chords.html', })
-        .when('/', { templateUrl: '/jazzguitarlessons.com/views/templates/structure/index.html', })
+        .when('/scales', { templateUrl: '/views/templates/intermediate/scales.html', })
+        .when('/chords', { templateUrl: '/views/templates/intermediate/chords.html', })
+        .when('/login', { templateUrl: '/views/templates/structure/login.html', })
+        .when('/', { templateUrl: '/views/templates/structure/index.html', })
         .otherwise( { redirectTo: '/' } )
     });
 

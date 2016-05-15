@@ -1,1 +1,1 @@
-!function(){angular.module("guitarlessons",["appStructure"])}();
+!function(){angular.module("guitarlessons",["appStructure","ngRoute","backand"])}();

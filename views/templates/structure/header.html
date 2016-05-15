@@ -92,7 +92,7 @@
                     <li ng-class="{ active:nav.isSelected(4) }">
                         <a href="#" ng-click="nav.selectNav(4)">Lick section</a>
                     </li>
-                    <li ng-class="{ active:nav.isSelected(5) }" ng-hide="header.user.loggedIn">
+                    <li ng-class="{ active:nav.isSelected(5) }" ng-show="header.user.loggedIn">
                         <a href="#" ng-click="nav.selectNav(5)">Memberships</a>
                     </li>
                 </ul>
@@ -103,7 +103,7 @@
             <div class="col-md-4" id="right_menu">
                 <ul class="nav navbar-nav navbar-right">
                     <li ng-class="{ active:nav.isSelected(6) }" class="hidden-xs"><a ng-click="nav.selectNav(6)" href="#"><img src="img/search_icon.png" alt=""/></a></li>
-                    <li ng-class="{ active:nav.isSelected(7) }" ng-hide="header.user.loggedIn" class="dropdown">
+                    <li ng-class="{ active:nav.isSelected(7) }" ng-show="header.user.loggedIn" class="dropdown">
                         <a ng-click="nav.selectNav(7)" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             <img src="img/myaccount_icon.png" alt="" class="my-account hidden-xs"/>My account <span class="fa fa-angle-down"></span>
                         </a>

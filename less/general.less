@@ -2,7 +2,9 @@
 @gray: #414141;
 @light-gray: #ECECEC;
 
+@import "vendor-prefixes.less";
 @import "variables.less";
+@import "login.less";
 
 .vertical-align(@position: static) {
   position: @position;
@@ -76,22 +78,25 @@ header {
                     left: auto;
                     bottom: auto;
                     right: 0;
-                    -ms-transform-origin: 50% 50% 0;
+                    .transform-origin(50% 50% 0);
+                    /*-ms-transform-origin: 50% 50% 0;
                     -webkit-transform-origin: 50% 50% 0;
                     -moz-transform-origin: 50% 50% 0;
-                    transform-origin: 50% 50% 0;
-                    -webkit-transition: all 300ms ease 0s;
+                    transform-origin: 50% 50% 0;*/
+                    .transition(all 300ms ease 0s);
+                    /*-webkit-transition: all 300ms ease 0s;
                     -moz-transition: all 300ms ease 0s;
                     -o-transition: all 300ms ease 0s;
-                    transition: all 300ms ease 0s;
+                    transition: all 300ms ease 0s;*/
                     width: 10px;
                     height: 1px;
                     background-color: black;
                     box-shadow: 0 1px 1px rgba(33,49,58,.1);
-                    -webkit-transform: rotate(45deg);
+                    .rotate(45deg);
+                    /*-webkit-transform: rotate(45deg);
                     -ms-transform: rotate(45deg);
                     -o-transform: rotate(45deg);
-                    transform: rotate(45deg);
+                    transform: rotate(45deg);*/
                     right: 6.07px;
                 }
                 .fa::after {
@@ -102,22 +107,25 @@ header {
                     left: auto;
                     bottom: auto;
                     right: 0;
-                    -ms-transform-origin: 50% 50% 0;
+                    .transform-origin(50% 50% 0);
+                    /*-ms-transform-origin: 50% 50% 0;
                     -webkit-transform-origin: 50% 50% 0;
                     -moz-transform-origin: 50% 50% 0;
-                    transform-origin: 50% 50% 0;
-                    -webkit-transition: all 300ms ease 0s;
+                    transform-origin: 50% 50% 0;*/
+                    .transition(all 300ms ease 0s);
+                    /*-webkit-transition: all 300ms ease 0s;
                     -moz-transition: all 300ms ease 0s;
                     -o-transition: all 300ms ease 0s;
-                    transition: all 300ms ease 0s;
+                    transition: all 300ms ease 0s;*/
                     width: 10px;
                     height: 1px;
                     background-color: #21313a;
                     box-shadow: 0 1px 1px rgba(33,49,58,.1);
-                    -webkit-transform: rotate(-45deg);
+                    .rotate(-45deg);
+                    /*-webkit-transform: rotate(-45deg);
                     -ms-transform: rotate(-45deg);
                     -o-transform: rotate(-45deg);
-                    transform: rotate(-45deg);
+                    transform: rotate(-45deg);*/
                     &:focus {
                         left: 115px;
                     }

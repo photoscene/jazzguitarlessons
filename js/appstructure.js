@@ -1,5 +1,5 @@
 (function(){
-    angular.module('appStructure', [])
+    angular.module('appStructure', ['backand']) /*, 'lessonService'*/
 
     .directive('footer', function () {
         return {
@@ -16,7 +16,7 @@
             controller: ['$scope', '$filter', function ($scope, $filter) {
                 this.user = users;
             }],
-            controllerAs: 'header' // this is the alias from this one: ng-controlles="headerCtrl as header"
+            controllerAs: 'header' // this is the alias from this one: ng-controller="headerCtrl as header"
         };
     })
 
@@ -29,12 +29,24 @@
         };
     })
 
-    .controller('mainCtrl', function(){
-        
+    .controller('mainCtrl', function($scope, Backand, lessonService){
+        this.user = users;
+        $scope.lessons = [];
+
+        function getAllLessons() {
+            lessonService.getLessons()
+                .then(function (result) {
+                $scope.lessons = result.data.data;
+                console.log(result);
+            });
+        };
+        getAllLessons();
     });
 
+    
+
     var users = {
-        loggedIn: false
+        loggedIn: true
     };
 
 })();

@@ -1,5 +1,14 @@
 <div>
-    <p>
-    This is the chords section
+    <p ng-show="main.user.loggedIn">
+    This is the chords sectionasd
     </p>
+
+    <div ng-repeat="lesson in lessons">
+        <h1>H1: {{lesson.title}} </h1>
+    </div>
+
+    <div ng-show="!main.user.loggedIn">
+        <p>Please log in first.</p>
+    </div>
+    
 </div>
