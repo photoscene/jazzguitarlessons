@@ -1,0 +1,17 @@
+<div ng-controller="lessonDetailCtrl as lesson">
+    <div class="col-md-2 left-lessons" ng-controller="lessonCtrl as lesson">
+        <ul ng-repeat="lesson in lessons" class="list-unstyled">
+            <li ng-show="lesson.intermediate">
+                <a href="#">{{ lesson.title }}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-10">
+        <h2>{{ lesson.title }} </h2>
+        <p><small>Date added: {{ lesson.dateOfCreation | date : format : shortDate }}</small></p>
+        <p><b>Short description: {{ lesson.description | limitTo:15 }}... </b></p>
+        <a href="#/chords/{{lesson.lessonUrl}}">Continue</a>
+        <!-- <p>{{ lesson.description }}</p> -->
+        <!-- <a href=" {{ lesson.videoUrl }} ">This is the link</a> -->
+    </div>
+</div>

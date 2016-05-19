@@ -1,0 +1,1 @@
+!function(){angular.module("appLessons",["backand"]).controller("lessonCtrl",function(n,s,o){function t(){o.getLessons().then(function(s){n.lessons=s.data.data})}n.lessons=[],t()})}();

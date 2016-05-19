@@ -85,17 +85,9 @@ header #right_menu > ul li .dropdown-toggle .fa::before {
   -moz-transform-origin: 50% 50% 0;
   -ms-transform-origin: 50% 50% 0;
   transform-origin: 50% 50% 0;
-  /*-ms-transform-origin: 50% 50% 0;
-                    -webkit-transform-origin: 50% 50% 0;
-                    -moz-transform-origin: 50% 50% 0;
-                    transform-origin: 50% 50% 0;*/
   -webkit-transition: all 300ms ease 0s;
   -o-transition: all 300ms ease 0s;
   transition: all 300ms ease 0s;
-  /*-webkit-transition: all 300ms ease 0s;
-                    -moz-transition: all 300ms ease 0s;
-                    -o-transition: all 300ms ease 0s;
-                    transition: all 300ms ease 0s;*/
   width: 10px;
   height: 1px;
   background-color: black;
@@ -104,10 +96,6 @@ header #right_menu > ul li .dropdown-toggle .fa::before {
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  /*-webkit-transform: rotate(45deg);
-                    -ms-transform: rotate(45deg);
-                    -o-transform: rotate(45deg);
-                    transform: rotate(45deg);*/
   right: 6.07px;
 }
 header #top_menu > ul li .dropdown-toggle .fa::after,
@@ -123,17 +111,9 @@ header #right_menu > ul li .dropdown-toggle .fa::after {
   -moz-transform-origin: 50% 50% 0;
   -ms-transform-origin: 50% 50% 0;
   transform-origin: 50% 50% 0;
-  /*-ms-transform-origin: 50% 50% 0;
-                    -webkit-transform-origin: 50% 50% 0;
-                    -moz-transform-origin: 50% 50% 0;
-                    transform-origin: 50% 50% 0;*/
   -webkit-transition: all 300ms ease 0s;
   -o-transition: all 300ms ease 0s;
   transition: all 300ms ease 0s;
-  /*-webkit-transition: all 300ms ease 0s;
-                    -moz-transition: all 300ms ease 0s;
-                    -o-transition: all 300ms ease 0s;
-                    transition: all 300ms ease 0s;*/
   width: 10px;
   height: 1px;
   background-color: #21313a;
@@ -142,10 +122,6 @@ header #right_menu > ul li .dropdown-toggle .fa::after {
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  /*-webkit-transform: rotate(-45deg);
-                    -ms-transform: rotate(-45deg);
-                    -o-transform: rotate(-45deg);
-                    transform: rotate(-45deg);*/
 }
 header #top_menu > ul li .dropdown-toggle .fa::after:focus,
 header #right_menu > ul li .dropdown-toggle .fa::after:focus {
@@ -190,4 +166,20 @@ header #right_menu {
   header #right_menu {
     float: left;
   }
+}
+main .left-lessons {
+  height: 300px;
+  background-color: #D0021B;
+}
+main .left-lessons li > a {
+  color: #fff;
+}
+main .lesson-tile {
+  border: 1px solid #eeeeee;
+}
+/*Footer*/
+footer {
+  border-top: 1px solid #D0021B;
+  margin-top: 32px;
+  padding-top: 32px;
 }

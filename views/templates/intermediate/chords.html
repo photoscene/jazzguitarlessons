@@ -2,10 +2,16 @@
     <p ng-show="main.user.loggedIn">
     This is the chords sectionasd
     </p>
-
-    <div ng-repeat="lesson in lessons">
-        <h1>H1: {{lesson.title}} </h1>
-    </div>
+        <div ng-repeat="lesson in lessons">
+            <div ng-show="lesson.intermediate" class="col-md-3 lesson-tile">
+                <h2>{{ lesson.title }} </h2>
+                <p><small>Date added: {{ lesson.dateOfCreation | date : format : shortDate }}</small></p>
+                <p><b>Short description: {{ lesson.description | limitTo:15 }}... </b></p>
+                <a href="#/chords/{{lesson.id}}">Continue</a>
+                <!-- <p>{{ lesson.description }}</p> -->
+                <!-- <a href=" {{ lesson.videoUrl }} ">This is the link</a> -->
+            </div>
+        </div>
 
     <div ng-show="!main.user.loggedIn">
         <p>Please log in first.</p>

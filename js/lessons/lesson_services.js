@@ -9,13 +9,22 @@
             return Backand.getApiUrl() + baseUrl + objectName;
         };
 
+        /*function getLessonUrl () {
+            return Backand.getApiUrl() + baseUrl + objectName + $routeParams.lessonId;
+        };*/
+
         getLessons = function () {
             return $http.get(getUrl());
         };
 
+        /*getCurrentLesson = function () {
+            return $http.get(getLessonUrl());
+        };*/
+
         return {
             getLessons: getLessons
+            /*getCurrentLesson: getCurrentLesson*/
         };
-    });
+    })
     
 })();

@@ -1,5 +1,11 @@
 (function() {
-    angular.module('guitarlessons', ['appStructure', 'ngRoute', 'backand'])
+    angular.module('guitarlessons', [
+        'appStructure', 
+        'appController', 
+        'appLessons',
+        'ngRoute',
+        'backand'
+         ])
     .config(function (BackandProvider) {
         BackandProvider.setAppName('guitarlessons');
         BackandProvider.setSignUpToken('003c6b69-f0bb-474d-a5af-f4185979d575');
