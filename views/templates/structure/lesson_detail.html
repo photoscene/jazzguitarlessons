@@ -6,12 +6,17 @@
             </li>
         </ul>
     </div>
-    <div class="col-md-10">
-        <h2>{{ lesson.title }} </h2>
-        <p><small>Date added: {{ lesson.dateOfCreation | date : format : shortDate }}</small></p>
-        <p><b>Short description: {{ lesson.description | limitTo:15 }}... </b></p>
-        <a href="#/chords/{{lesson.lessonUrl}}">Continue</a>
-        <!-- <p>{{ lesson.description }}</p> -->
-        <!-- <a href=" {{ lesson.videoUrl }} ">This is the link</a> -->
+    <div class="container detailed-lesson">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>{{ lesson.title }} </h2>
+                <p><small>Date added: {{ lesson.dateOfCreation | date : format : shortDate }}</small></p>
+                <p>{{lesson.description}}</p>
+                <div>{{lesson.videoIframe}}</div>
+                <div lesson-youtube code="code"></div>
+                <!-- <a href=" {{ lesson.videoUrl }} ">This is the link</a> -->
+            </div>
+            
+        </div>
     </div>
 </div>

@@ -1,7 +1,7 @@
 (function(){
     angular.module('appLessons', ['backand'])
 
-    .controller('lessonCtrl', function($scope, Backand, lessonService, $routeParams){
+    .controller('lessonCtrl', function($scope, Backand, lessonService){
         $scope.lessons = [];
 
         function getAllLessons() {
@@ -23,9 +23,11 @@
     })
 
     .controller('lessonDetailCtrl', ['$scope', '$routeParams', '$http', 'Backand', function($scope, $routeParams, $http, Backand) {
-        $http.get(Backand.getApiUrl() + '/1/objects/lessons/' + $routeParams.lessonUrl)
+        $http.get(Backand.getApiUrl() + '/1/objects/lessons/' + $routeParams.id)
         .success(function(data) {
             $scope.lesson = data;
+
+            $scope.code = $scope.lesson.youtubeVideoCode;
         });
     }])
 })();
