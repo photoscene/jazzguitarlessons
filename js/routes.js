@@ -1,5 +1,5 @@
 (function() {
-    angular.module('guitarlessons')
+    angular.module('models')
     .config(function($routeProvider){
         $routeProvider
         .when('/scales', { templateUrl: '/views/templates/intermediate/scales.html', })

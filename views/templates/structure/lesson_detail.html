@@ -1,22 +1,18 @@
-<div ng-controller="lessonDetailCtrl as lesson">
-    <div class="col-md-2 left-lessons" ng-controller="lessonCtrl as lesson">
-        <ul ng-repeat="lesson in lessons" class="list-unstyled">
-            <li ng-show="lesson.intermediate">
+<div ng-controller="lessonDetailCtrl as lesson" id="lesson_container">
+    <div class="left-lessons" ng-controller="lessonCtrl as lesson">
+        <button ng-click="closeLeftBar()" class="close"><i class="fa fa-close"></i></button>
+        <ul class="list-unstyled">
+            <li ng-repeat="lesson in lessons"  ng-show="lesson.intermediate">
                 <a href="#">{{ lesson.title }}</a>
             </li>
         </ul>
     </div>
-    <div class="container detailed-lesson">
-        <div class="row">
-            <div class="col-md-12">
-                <h2>{{ lesson.title }} </h2>
-                <p><small>Date added: {{ lesson.dateOfCreation | date : format : shortDate }}</small></p>
-                <p>{{lesson.description}}</p>
-                <div>{{lesson.videoIframe}}</div>
-                <div lesson-youtube code="code"></div>
-                <!-- <a href=" {{ lesson.videoUrl }} ">This is the link</a> -->
-            </div>
-            
-        </div>
+    <div class="detailed-lesson">
+        <h2>{{ lesson.title }} </h2>
+        <p><small>Date added: {{ lesson.dateOfCreation | date : format : shortDate }}</small></p>
+        <p>{{lesson.description}}</p>
+        <div>{{lesson.videoIframe}}</div>
+        <div lesson-youtube code="code"></div>
+        <!-- <a href=" {{ lesson.videoUrl }} ">This is the link</a> -->
     </div>
 </div>

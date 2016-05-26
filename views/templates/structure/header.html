@@ -18,9 +18,9 @@
             <div class="col-md-8" id="top_menu">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#"><img src="img/home_icon.png" alt=""/></a></li>
-                    <li ng-class="{ active:nav.isSelected(1) }"><a href="#" ng-click="nav.selectNav(1)">Basic</a></li>
+                    <li ng-class="{ active:nav.isSelected(1) }"><a href="#" ng-click="nav.selectNav(1)">{{mainCategories[0].name}}</a></li>
                     <li ng-class="{ active:nav.isSelected(2) }" class="dropdown">
-                        <a ng-click="nav.selectNav(2)" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Intermediate <span class="fa"></span></a>
+                        <a ng-click="nav.selectNav(2)" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{mainCategories[1].name}}<span class="fa"></span></a>
                         <div class="dropdown-menu full-width-dropdown">
                             <div class="container">
                                 <div class="row">
@@ -87,7 +87,7 @@
                         </div>
                     </li>
                     <li ng-class="{ active:nav.isSelected(3) }">
-                        <a href="#" ng-click="nav.selectNav(3)">Advanced</a>
+                        <a href="#" ng-click="nav.selectNav(3)">{{mainCategories[2].name}}</a>
                     </li>
                     <li ng-class="{ active:nav.isSelected(4) }">
                         <a href="#" ng-click="nav.selectNav(4)">Lick section</a>

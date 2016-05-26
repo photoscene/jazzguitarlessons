@@ -1,20 +1,27 @@
-<div>
-    <p ng-show="main.user.loggedIn">
+<div id="lesson-list">
+    <!-- <p ng-show="main.user.loggedIn">
     This is the chords sectionasd
-    </p>
-        <div ng-repeat="lesson in lessons">
-            <div ng-show="lesson.intermediate" class="col-md-3 lesson-tile">
-                <h2>{{ lesson.title }} </h2>
-                <p><small>Date added: {{ lesson.dateOfCreation | date : format : shortDate }}</small></p>
-                <p><b>Short description: {{ lesson.description | limitTo:15 }}... </b></p>
-                <a href="#/chords/{{lesson.id}}">Continue</a>
-                <!-- <p>{{ lesson.description }}</p> -->
-                <!-- <a href=" {{ lesson.videoUrl }} ">This is the link</a> -->
+    </p> -->
+
+    <div ng-repeat="lesson in lessons" class="col-md-3 lesson-tile">
+        <div ng-show="checkCategory(subCategories[0],lesson)">
+            <h3><b>{{ lesson.title }}</b></h3>
+            <p>{{ lesson.description }}</p>
+            <a href="#/chords/{{ lesson.id }}">Continue</a>
+        </div>
+    </div>
+
+    <!-- <div ng-repeat="category in subCategories">
+        <div ng-show="category" class="col-md-12">
+            <h2>{{ category.name }} </h2>
+            <div ng-repeat="lesson in lessons">
+                <div ng-show="checkCategory(subCategories[0],lesson)" class="col-md-3 lesson-tile">
+                    <h3><b>{{ lesson.title }}</b></h3>
+                    <p>{{ lesson.description }}</p>
+                    <a href="#/chords/{{lesson.id}}">Continue</a>
+                </div>
             </div>
         </div>
-
-    <div ng-show="!main.user.loggedIn">
-        <p>Please log in first.</p>
-    </div>
+    </div> -->
     
 </div>

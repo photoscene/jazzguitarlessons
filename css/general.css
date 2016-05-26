@@ -30,7 +30,7 @@ a {
   color: #D0021B;
 }
 a:hover {
-  color: #555555;
+  color: #414141;
   text-decoration: none;
 }
 header .navbar-default {
@@ -38,6 +38,7 @@ header .navbar-default {
   border-bottom: 1px solid #D0021B;
   background-color: #fff;
   border-radius: 0;
+  margin-bottom: 0 !important;
 }
 @media (min-width: 768px) {
   header .navbar-default .container-fluid,
@@ -46,34 +47,37 @@ header .navbar-default {
     padding-right: 0;
   }
 }
-header #top_menu > ul .active > a,
-header #right_menu > ul .active > a {
+header #main-navbar {
+  overflow-y: visible;
+}
+header #main-navbar #top_menu > ul .active > a,
+header #main-navbar #right_menu > ul .active > a {
   background-color: transparent;
   color: #D0021B;
 }
 @media (min-width: 768px) {
-  header #top_menu > ul li,
-  header #right_menu > ul li {
+  header #main-navbar #top_menu > ul li,
+  header #main-navbar #right_menu > ul li {
     display: inline-block;
     height: 60px;
     position: static;
     float: none;
   }
 }
-header #top_menu > ul li a,
-header #right_menu > ul li a {
+header #main-navbar #top_menu > ul li a,
+header #main-navbar #right_menu > ul li a {
   text-transform: uppercase;
 }
-header #top_menu > ul li a img,
-header #right_menu > ul li a img {
+header #main-navbar #top_menu > ul li a img,
+header #main-navbar #right_menu > ul li a img {
   max-height: 30px;
 }
-header #top_menu > ul li a .my-account,
-header #right_menu > ul li a .my-account {
+header #main-navbar #top_menu > ul li a .my-account,
+header #main-navbar #right_menu > ul li a .my-account {
   padding-right: 10px;
 }
-header #top_menu > ul li .dropdown-toggle .fa::before,
-header #right_menu > ul li .dropdown-toggle .fa::before {
+header #main-navbar #top_menu > ul li .dropdown-toggle .fa::before,
+header #main-navbar #right_menu > ul li .dropdown-toggle .fa::before {
   content: "";
   display: block;
   position: absolute;
@@ -98,8 +102,8 @@ header #right_menu > ul li .dropdown-toggle .fa::before {
   transform: rotate(45deg);
   right: 6.07px;
 }
-header #top_menu > ul li .dropdown-toggle .fa::after,
-header #right_menu > ul li .dropdown-toggle .fa::after {
+header #main-navbar #top_menu > ul li .dropdown-toggle .fa::after,
+header #main-navbar #right_menu > ul li .dropdown-toggle .fa::after {
   content: "";
   display: block;
   position: absolute;
@@ -123,12 +127,12 @@ header #right_menu > ul li .dropdown-toggle .fa::after {
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-header #top_menu > ul li .dropdown-toggle .fa::after:focus,
-header #right_menu > ul li .dropdown-toggle .fa::after:focus {
+header #main-navbar #top_menu > ul li .dropdown-toggle .fa::after:focus,
+header #main-navbar #right_menu > ul li .dropdown-toggle .fa::after:focus {
   left: 115px;
 }
-header #top_menu > ul li .full-width-dropdown,
-header #right_menu > ul li .full-width-dropdown {
+header #main-navbar #top_menu > ul li .full-width-dropdown,
+header #main-navbar #right_menu > ul li .full-width-dropdown {
   width: 100vw;
   position: absolute;
   top: 100%;
@@ -139,23 +143,23 @@ header #right_menu > ul li .full-width-dropdown {
   padding: 30px;
 }
 @media (max-width: 767px) {
-  header #top_menu > ul li .full-width-dropdown,
-  header #right_menu > ul li .full-width-dropdown {
+  header #main-navbar #top_menu > ul li .full-width-dropdown,
+  header #main-navbar #right_menu > ul li .full-width-dropdown {
     position: relative;
     width: 100%;
     box-shadow: none;
   }
 }
-header #top_menu > ul li .full-width-dropdown .category-img,
-header #right_menu > ul li .full-width-dropdown .category-img {
+header #main-navbar #top_menu > ul li .full-width-dropdown .category-img,
+header #main-navbar #right_menu > ul li .full-width-dropdown .category-img {
   width: 200px;
 }
-header #top_menu > ul li .full-width-dropdown li,
-header #right_menu > ul li .full-width-dropdown li {
+header #main-navbar #top_menu > ul li .full-width-dropdown li,
+header #main-navbar #right_menu > ul li .full-width-dropdown li {
   height: auto;
 }
-header #top_menu > ul li .full-width-dropdown .category-img,
-header #right_menu > ul li .full-width-dropdown .category-img {
+header #main-navbar #top_menu > ul li .full-width-dropdown .category-img,
+header #main-navbar #right_menu > ul li .full-width-dropdown .category-img {
   width: 50px;
   padding-top: 15px;
 }
@@ -167,22 +171,71 @@ header #right_menu {
     float: left;
   }
 }
-main .left-lessons {
-  height: 300px;
-  background-color: #D0021B;
+main #lesson-list {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
 }
-main .left-lessons li > a {
+@media (min-width: 768px) {
+  main #lesson-list .lesson-tile {
+    /*display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            position: static;*/
+    /*margin-bottom: -99999px;
+                padding-bottom: 99999px;*/
+    border: 1px solid #eeeeee;
+  }
+}
+main #lesson_container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  main #lesson_container {
+    flex-flow: row nowrap;
+    float: left;
+  }
+}
+@media (min-width: 768px) {
+  main #lesson_container .left-lessons {
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+  }
+}
+main #lesson_container .left-lessons {
+  background-color: #D0021B;
+  position: relative;
+}
+main #lesson_container .left-lessons ul {
+  padding: 30px;
+}
+main #lesson_container .left-lessons ul li {
+  padding: 10px 0;
+}
+main #lesson_container .left-lessons ul li > a {
   color: #fff;
 }
-main .left-lessons + .detailed-lesson {
-  width: 900px;
+main #lesson_container .left-lessons .close {
+  opacity: 1;
+  color: white;
+  text-shadow: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
-main .lesson-tile {
-  border: 1px solid #eeeeee;
+main #lesson_container .detailed-lesson {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 /*Footer*/
 footer {
   border-top: 1px solid #D0021B;
-  margin-top: 32px;
   padding-top: 32px;
 }
