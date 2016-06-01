@@ -3,25 +3,20 @@
     This is the chords sectionasd
     </p> -->
 
-    <div ng-repeat="lesson in lessons" class="col-md-3 lesson-tile">
+    <!-- <div ng-repeat="lesson in lessons" class="col-md-3 lesson-tile">
         <div ng-show="checkCategory(subCategories[0],lesson)">
             <h3><b>{{ lesson.title }}</b></h3>
             <p>{{ lesson.description }}</p>
             <a href="#/chords/{{ lesson.id }}">Continue</a>
         </div>
-    </div>
-
-    <!-- <div ng-repeat="category in subCategories">
-        <div ng-show="category" class="col-md-12">
-            <h2>{{ category.name }} </h2>
-            <div ng-repeat="lesson in lessons">
-                <div ng-show="checkCategory(subCategories[0],lesson)" class="col-md-3 lesson-tile">
-                    <h3><b>{{ lesson.title }}</b></h3>
-                    <p>{{ lesson.description }}</p>
-                    <a href="#/chords/{{lesson.id}}">Continue</a>
-                </div>
-            </div>
-        </div>
     </div> -->
+
+    <div ng-repeat="lesson in lessons" class="col-md-3 lesson-tile">
+        <div ng-show="checkCategory(subCategories[8],lesson)">
+            <h3><b>{{ lesson.title }}</b></h3>
+            <p>{{ lesson.description }}</p>
+            <a href="#/chords/{{ lesson.id }}">Continue</a>
+        </div>
+    </div>
     
 </div>

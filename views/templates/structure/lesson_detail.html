@@ -1,8 +1,9 @@
 <div ng-controller="lessonDetailCtrl as lesson" id="lesson_container">
+    <button ng-click="openLeftBar()" class="open"><i class="fa fa-arrow-right"></i></button>
     <div class="left-lessons" ng-controller="lessonCtrl as lesson">
         <button ng-click="closeLeftBar()" class="close"><i class="fa fa-close"></i></button>
         <ul class="list-unstyled">
-            <li ng-repeat="lesson in lessons"  ng-show="lesson.intermediate">
+            <li ng-repeat="lesson in lessons" ng-show="lesson">
                 <a href="#">{{ lesson.title }}</a>
             </li>
         </ul>

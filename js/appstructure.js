@@ -1,25 +1,25 @@
 (function(){
-    angular.module('appController', ['backand']) /*, 'lessonService'*/
+    angular.module('appController', ['backand', 'services'])
 
-    .controller('navCtrl', function($scope, Backand, navService){
+    .controller('navCtrl', function($scope, Backand, categoryService){
 
         $scope.mainCategories = [];
+        $scope.subCategories = [];
+        $scope.selected = 0;
 
-        this.selectNav = function (setNav){
-            this.nav = setNav;
-        };
-        this.isSelected = function (checkNav){
-            return this.nav === checkNav;
-        };
-
-        function getAllMainCategories() {
-            navService.getMainCategories()
-                .then(function (result) {
-                $scope.mainCategories = result.data.data;
-            });
+        $scope.select= function(index) {
+           $scope.selected = index; 
         };
 
-        getAllMainCategories();
+        categoryService.getMainCategories()
+        .then(function(result) {
+            $scope.mainCategories = result.data;
+        });
+        categoryService.getSubCategories()
+        .then(function(result) {
+            $scope.subCategories = result.data;
+        });
+
     })
 
     .controller('mainCtrl', function(){

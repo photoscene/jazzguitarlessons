@@ -6,6 +6,8 @@
         $scope.subCategories = [];
         $scope.switches = [];
 
+        $scope.mainCategories = [];
+
         $scope.checkCategory = function(currentCategory,currentLesson){
             if($filter('filter')($scope.switches, {category : currentCategory.id + "", lesson : currentLesson.id + ""}).length)
                 return true; 
@@ -31,7 +33,6 @@
             });
         };
 
-
         getAllLessons();
         getAllSubCategories();
         getAllSwitch();
@@ -45,8 +46,42 @@
         });
         $scope.closeLeftBar = function (){
             var categoryList = $('.left-lessons');
-            categoryList.hide();
+            var left = categoryList.offset().left;
+
+            categoryList.css({left:left})
+            .animate({"left":"-300px"}, "slow", function(){
+                categoryList.hide();
+            });
         };
+        $scope.openLeftBar = function (){
+            var categoryList = $('.left-lessons');
+            var left = categoryList.offset().left;
+
+            categoryList
+            .show( function(){
+                categoryList.animate({"left":"0px"}, "slow");
+            });
+        };
+
+        /*$scope.leftBar = {
+            init: function() {
+                this.$element = $('.left-lessons');
+                this.$leftPosition = this.$element.offset().left;
+            },
+            openBar: function () {
+                this.$element
+                .show( function(){
+                    categoryList.animate({"left":"0px"}, "slow");
+                });
+            },
+            closeBar: function() {
+                this.$element
+                .css({left:left})
+                .animate({"left":"-300px"}, "slow", function(){
+                    categoryList.hide();
+                });
+            }
+        }*/
 
     }])
 

@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "active": true,
+        "name": "Basic"
+    },
+    {
+        "id": 2,
+        "active": true,
+        "name": "Intermediate"
+    },
+    {
+        "id": 3,
+        "active": true,
+        "name": "Advanced"
+    }
+]

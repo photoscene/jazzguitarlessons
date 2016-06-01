@@ -18,7 +18,15 @@
             <div class="col-md-8" id="top_menu">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#"><img src="img/home_icon.png" alt=""/></a></li>
-                    <li ng-class="{ active:nav.isSelected(1) }"><a href="#" ng-click="nav.selectNav(1)">{{mainCategories[0].name}}</a></li>
+                    <li ng-repeat="category in mainCategories" ng-class="{ active: $index == selected }">
+                        <a ng-click="select($index)" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{category.name}}</a>
+                        <ul class="dropdown-menu">
+                            <li ng-repeat="subcategory in subCategories">
+                                <a href="#{{subcategory.url}}">{{subcategory.name}}</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- <li ng-class="{ active:nav.isSelected(1) }"><a href="#" ng-click="nav.selectNav(1)">{{nav.mainCategories[0].name}}</a></li>
                     <li ng-class="{ active:nav.isSelected(2) }" class="dropdown">
                         <a ng-click="nav.selectNav(2)" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{mainCategories[1].name}}<span class="fa"></span></a>
                         <div class="dropdown-menu full-width-dropdown">
@@ -88,7 +96,7 @@
                     </li>
                     <li ng-class="{ active:nav.isSelected(3) }">
                         <a href="#" ng-click="nav.selectNav(3)">{{mainCategories[2].name}}</a>
-                    </li>
+                    </li> -->
                     <li ng-class="{ active:nav.isSelected(4) }">
                         <a href="#" ng-click="nav.selectNav(4)">Lick section</a>
                     </li>
@@ -105,14 +113,18 @@
                     <li ng-class="{ active:nav.isSelected(6) }" class="hidden-xs"><a ng-click="nav.selectNav(6)" href="#"><img src="img/search_icon.png" alt=""/></a></li>
                     <li ng-class="{ active:nav.isSelected(7) }" ng-show="header.user.loggedIn" class="dropdown">
                         <a ng-click="nav.selectNav(7)" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <img src="img/myaccount_icon.png" alt="" class="my-account hidden-xs"/>My account <span class="fa fa-angle-down"></span>
+                            <img src="img/myaccount_icon.png" alt="" class="hidden-xs"/>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Membership</a></li>
                             <li><a href="#">Payments</a></li>
                         </ul>
                     </li>
-                    <li ng-class="{ active:nav.isSelected(8) }"><a href="#" ng-click="nav.selectNav(8)">Contact</a></li>
+                    <li ng-class="{ active:nav.isSelected(8) }">
+                        <a href="#" ng-click="nav.selectNav(8)">
+                            <img src="img/contact_icon.png" alt=""/>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div><!-- /.navbar-collapse -->

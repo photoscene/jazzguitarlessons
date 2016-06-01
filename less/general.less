@@ -1,10 +1,16 @@
 @import "vendor-prefixes.less";
-@import "variables.less";
+@import "/bootstrap/variables.less";
 @import "login.less";
+@import '/bootstrap/bootstrap.less';
 
-@app-primary: #D0021B;
+@app-primary: #945aff;
 @gray: #414141;
 @light-gray: #ECECEC;
+
+@font-face {
+  font-family: 'Proxima-light';
+  src: url("../fonts/Proxima Nova Alt Light.otf");
+}
 
 .vertical-align(@position: static) {
   position: @position;
@@ -21,8 +27,7 @@
 }
 
 h1, h2, h3, h4, h5, h6, a, p, span, small {
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 300;
+    font-family: 'Proxima-light', sans-serif;
 }
 
 ///////// General styles ///////////
@@ -37,8 +42,9 @@ a {
 header {
     .navbar-default {
         border: none;
-        border-bottom: 1px solid @app-primary;
-        background-color: #fff;
+        //border-bottom: 1px solid @app-primary;
+        #gradient > .horizontal(#3c4d68; @app-primary);
+        background-color: @app-primary;
         border-radius: 0;
         margin-bottom: 0 !important;
         @media (min-width: @screen-sm-min) {
@@ -53,7 +59,7 @@ header {
         #top_menu > ul, #right_menu > ul {
             .active > a {
                 background-color: transparent;
-                color: @app-primary;
+                font-weight: 800;
             }
             li {
                 @media (min-width: @screen-sm-min) {
@@ -64,13 +70,17 @@ header {
                 }
                 a {
                     text-transform: uppercase;
+                    color: white;
                     img {
                         max-height: 30px;
                     }
-                    .my-account {
-                        padding-right: 10px;
-                    }
                 }
+                .dropdown-menu li {
+                    display: block;
+                    a {
+                        color: @gray-light;
+                    }
+                } 
                 .dropdown-toggle {
                     .fa::before {
                         content: "";
@@ -109,7 +119,7 @@ header {
                         }
                     }
                 }
-                .full-width-dropdown {
+                /*.full-width-dropdown {
                     width: 100vw;
                     position: absolute;
                     top: 100%;
@@ -133,7 +143,7 @@ header {
                         width: 50px;
                         padding-top: 15px
                     }
-                }
+                }*/
             }
         }
     }
@@ -172,12 +182,13 @@ main {
         overflow: hidden;
         @media (min-width: @screen-sm-min) {
             flex-flow: row nowrap;
-            float: left;
+            //float: left;
         }
         .left-lessons {
             @media (min-width: @screen-sm-min) {
                 margin-bottom: -99999px;
                 padding-bottom: 99999px;
+                min-width: 300px;
             }
         }
         .left-lessons {
@@ -200,6 +211,16 @@ main {
                 right: 10px;
                 top: 10px;
             }
+        }
+        .open {
+            width: 40px;
+            height: 40px;
+            opacity: 1;
+            text-shadow: none;
+            position: absolute;
+            left: 0;
+            top: 80px;
+            border: none;
         }
         .detailed-lesson {
             width: 90%;

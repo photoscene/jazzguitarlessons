@@ -39,11 +39,10 @@
         };
     })
 
-    .service('navService', function ($http, Backand) {
+    /*.service('navService', function ($http, Backand) {
         var baseUrl = '/1/objects/';
         var objectName = 'mainCategories';
 
-        /*Maincategories*/
         function getUrlMaincategories () {
             return Backand.getApiUrl() + baseUrl + objectName;
         };
@@ -55,6 +54,6 @@
         return {
             getMainCategories: getMainCategories
         };
-    })
+    })*/
     
 })();
