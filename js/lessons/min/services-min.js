@@ -1,0 +1,1 @@
+!function(){angular.module("services",["backand"]).service("categoryService",function(e){return getMainCategories=function(){return e.get("/js/json/main_categories.json")},getSubCategories=function(){return e.get("/js/json/subcategories.json")},{getMainCategories:getMainCategories,getSubCategories:getSubCategories}})}();

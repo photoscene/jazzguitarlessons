@@ -3,16 +3,8 @@
     This is the chords sectionasd
     </p> -->
 
-    <!-- <div ng-repeat="lesson in lessons" class="col-md-3 lesson-tile">
-        <div ng-show="checkCategory(subCategories[0],lesson)">
-            <h3><b>{{ lesson.title }}</b></h3>
-            <p>{{ lesson.description }}</p>
-            <a href="#/chords/{{ lesson.id }}">Continue</a>
-        </div>
-    </div> -->
-
     <div ng-repeat="lesson in lessons" class="col-md-3 lesson-tile">
-        <div ng-show="checkCategory(subCategories[8],lesson)">
+        <div ng-show="lesson">
             <h3><b>{{ lesson.title }}</b></h3>
             <p>{{ lesson.description }}</p>
             <a href="#/chords/{{ lesson.id }}">Continue</a>

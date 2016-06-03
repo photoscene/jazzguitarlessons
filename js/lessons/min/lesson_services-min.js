@@ -1,0 +1,1 @@
+!function(){angular.module("models").service("lessonService",function(s,e){return getLessons=function(){return s.get("/js/json/lessons.json")},{getLessons:getLessons}})}();

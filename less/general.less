@@ -42,7 +42,6 @@ a {
 header {
     .navbar-default {
         border: none;
-        //border-bottom: 1px solid @app-primary;
         #gradient > .horizontal(#3c4d68; @app-primary);
         background-color: @app-primary;
         border-radius: 0;
@@ -59,7 +58,7 @@ header {
         #top_menu > ul, #right_menu > ul {
             .active > a {
                 background-color: transparent;
-                font-weight: 800;
+                color: #E8C51A;
             }
             li {
                 @media (min-width: @screen-sm-min) {
@@ -182,16 +181,20 @@ main {
         overflow: hidden;
         @media (min-width: @screen-sm-min) {
             flex-flow: row nowrap;
-            //float: left;
+        }
+        .detailed-lesson {
+            .transition(left 0.5s ease-in-out);
+        }
+        .left-lessons.in {
+            left: 0px;
         }
         .left-lessons {
             @media (min-width: @screen-sm-min) {
                 margin-bottom: -99999px;
                 padding-bottom: 99999px;
-                min-width: 300px;
+                left: -25%;
             }
-        }
-        .left-lessons {
+            .transition(left 0.5s ease-in-out);
             background-color: @app-primary;
             position: relative;
             ul {
@@ -221,11 +224,6 @@ main {
             left: 0;
             top: 80px;
             border: none;
-        }
-        .detailed-lesson {
-            width: 90%;
-            margin: 0 auto;
-            padding: 0 30px;
         }
     }
 }

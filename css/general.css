@@ -6798,7 +6798,7 @@ header #main-navbar {
 header #main-navbar #top_menu > ul .active > a,
 header #main-navbar #right_menu > ul .active > a {
   background-color: transparent;
-  font-weight: 800;
+  color: #E8C51A;
 }
 header #main-navbar #top_menu > ul li,
 header #main-navbar #right_menu > ul li {
@@ -6947,16 +6947,27 @@ main #lesson_container {
     flex-flow: row nowrap;
   }
 }
+main #lesson_container .detailed-lesson {
+  -webkit-transition: left 0.5s ease-in-out;
+  -o-transition: left 0.5s ease-in-out;
+  transition: left 0.5s ease-in-out;
+}
+main #lesson_container .left-lessons.in {
+  left: 0px;
+}
+main #lesson_container .left-lessons {
+  -webkit-transition: left 0.5s ease-in-out;
+  -o-transition: left 0.5s ease-in-out;
+  transition: left 0.5s ease-in-out;
+  background-color: #945aff;
+  position: relative;
+}
 @media (min-width: 768px) {
   main #lesson_container .left-lessons {
     margin-bottom: -99999px;
     padding-bottom: 99999px;
-    min-width: 300px;
+    left: -25%;
   }
-}
-main #lesson_container .left-lessons {
-  background-color: #945aff;
-  position: relative;
 }
 main #lesson_container .left-lessons ul {
   padding: 30px;
@@ -6984,11 +6995,6 @@ main #lesson_container .open {
   left: 0;
   top: 80px;
   border: none;
-}
-main #lesson_container .detailed-lesson {
-  width: 90%;
-  margin: 0 auto;
-  padding: 0 30px;
 }
 /*Footer*/
 footer {

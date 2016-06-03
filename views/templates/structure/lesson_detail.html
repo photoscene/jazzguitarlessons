@@ -1,16 +1,17 @@
-<div ng-controller="lessonDetailCtrl as lesson" id="lesson_container">
+<div id="lesson_container">
     <button ng-click="openLeftBar()" class="open"><i class="fa fa-arrow-right"></i></button>
-    <div class="left-lessons" ng-controller="lessonCtrl as lesson">
+    <div class="col-md-3 left-lessons in" ng-controller="lessonCtrl">
         <button ng-click="closeLeftBar()" class="close"><i class="fa fa-close"></i></button>
         <ul class="list-unstyled">
             <li ng-repeat="lesson in lessons" ng-show="lesson">
-                <a href="#">{{ lesson.title }}</a>
+                <a href="#/chords/{{ lesson.id }}">{{ lesson.title }}</a>
             </li>
         </ul>
     </div>
-    <div class="detailed-lesson">
-        <h2>{{ lesson.title }} </h2>
-        <p><small>Date added: {{ lesson.dateOfCreation | date : format : shortDate }}</small></p>
+    <div class="col-md-9 detailed-lesson">
+        <h2><pre>{{ lesson | json }}</pre></h2>
+        <!-- <p><small>Date added: {{ lesson.dateOfCreation | date : format : shortDate }}</small></p> -->
+        <h2>{{ lesson.title }}</h2>
         <p>{{lesson.description}}</p>
         <div>{{lesson.videoIframe}}</div>
         <div lesson-youtube code="code"></div>
