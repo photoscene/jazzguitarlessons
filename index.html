@@ -33,22 +33,31 @@
         </footer> 
 
         <!-- jquery / angularjs js -->
-        <script src="js/jquery-1.11.0.min.js"></script>
+        <script src="js/libraries/jquery-1.11.0.min.js"></script>
         <script data-require="angular.js@1.3.x" src="https://code.angularjs.org/1.3.15/angular.js" data-semver="1.3.15"></script>
         <script data-require="angular.js@1.3.x" src="https://code.angularjs.org/1.3.15/angular-route.js" data-semver="1.3.15"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <script src="js/libraries/bootstrap.min.js"></script>
 
         <!-- app's js -->
         <script src="js/app.js"></script>
-        <script src="js/appstructure.js"></script>
-        <!-- Lessons -->
-        <script src="js/lessons/applessons.js"></script>
-        <script src="js/lessons/lesson_services.js"></script>
-        <script src="js/lessons/services.js"></script>
-        <script src="js/structure.js"></script>
         <script src="js/routes.js"></script>
 
+        <!-- Services -->
+        <script src="js/services/lesson-category-service.js"></script>
+        <script src="js/services/lesson-service.js"></script>
+
+        <!-- Controllers -->
+        <script src="js/controllers/lessons-controller.js"></script>
+        <script src="js/controllers/nav-controller.js"></script>
+        <script src="js/controllers/main-controller.js"></script>
+        
+        <!-- Directives -->
+        <script src="js/directives/page_structure_directives.js"></script>
+        <script src="js/directives/youtube_code.js"></script>
+        <script src="js/directives/lesson-left-category-panel.js"></script>
+
         <script src="js/login.js"></script>
+
         <!-- Backand SDK for Angular -->
         <script src="//code.angularjs.org/1.3.0/angular-cookies.min.js"></script>
         <script src="//cdn.backand.net/backand/dist/1.8.2/backand.min.js"></script>

@@ -155,17 +155,6 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/appstructure.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/appstructure.js",
-		"outputAbbreviatedPath": "\/js\/min\/appstructure-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/js\/backand.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -177,45 +166,67 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/bootstrap.js": {
+	"\/js\/controllers\/lessons-controller.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/bootstrap.js",
-		"outputAbbreviatedPath": "\/js\/min\/bootstrap-min.js",
+		"inputAbbreviatedPath": "\/js\/controllers\/lessons-controller.js",
+		"outputAbbreviatedPath": "\/js\/controllers\/min\/lessons-controller-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/bootstrap.min.js": {
+	"\/js\/controllers\/main-controller.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/bootstrap.min.js",
-		"outputAbbreviatedPath": "\/js\/min\/bootstrap.min-min.js",
+		"inputAbbreviatedPath": "\/js\/controllers\/main-controller.js",
+		"outputAbbreviatedPath": "\/js\/controllers\/min\/main-controller-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/data.json": {
-		"fileType": 524288,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/data.json",
-		"orderOutput": 0,
-		"outputAbbreviatedPath": "\/js\/data-min.json",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1
-		},
-	"\/js\/jquery-1.11.0.min.js": {
+	"\/js\/controllers\/nav-controller.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/jquery-1.11.0.min.js",
-		"outputAbbreviatedPath": "\/js\/min\/jquery-1.11.0.min-min.js",
+		"inputAbbreviatedPath": "\/js\/controllers\/nav-controller.js",
+		"outputAbbreviatedPath": "\/js\/controllers\/min\/nav-controller-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/directives\/lesson-left-category-panel.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/directives\/lesson-left-category-panel.js",
+		"outputAbbreviatedPath": "\/js\/directives\/min\/lesson-left-category-panel-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/directives\/page_structure_directives.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/directives\/page_structure_directives.js",
+		"outputAbbreviatedPath": "\/js\/directives\/min\/page_structure_directives-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/directives\/youtube_code.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/directives\/youtube_code.js",
+		"outputAbbreviatedPath": "\/js\/directives\/min\/youtube_code-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -243,6 +254,28 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
+	"\/js\/json\/lesson-3.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/json\/lesson-3.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/js\/json\/lesson-3-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/js\/json\/lesson-4.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/json\/lesson-4.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/js\/json\/lesson-4-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/js\/json\/lessons.json": {
 		"fileType": 524288,
 		"ignore": 1,
@@ -265,100 +298,67 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
-	"\/js\/json\/subcategories.json": {
+	"\/js\/json\/subcategory-advanced.json": {
 		"fileType": 524288,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/json\/subcategories.json",
+		"inputAbbreviatedPath": "\/js\/json\/subcategory-advanced.json",
 		"orderOutput": 0,
-		"outputAbbreviatedPath": "\/js\/json\/subcategories-min.json",
+		"outputAbbreviatedPath": "\/js\/json\/subcategory-advanced-min.json",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
-	"\/js\/lessons\/applessons.js": {
+	"\/js\/json\/subcategory-basic.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/json\/subcategory-basic.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/js\/json\/subcategory-basic-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/js\/json\/subcategory-intermediate.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/json\/subcategory-intermediate.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/js\/json\/subcategory-intermediate-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/js\/json\/subcategory_section.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/json\/subcategory_section.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/js\/json\/subcategory_section-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/js\/libraries\/bootstrap.min.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/lessons\/applessons.js",
-		"outputAbbreviatedPath": "\/js\/lessons\/min\/applessons-min.js",
+		"inputAbbreviatedPath": "\/js\/libraries\/bootstrap.min.js",
+		"outputAbbreviatedPath": "\/js\/libraries\/min\/bootstrap.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/lessons\/lesson_directives.js": {
+	"\/js\/libraries\/jquery-1.11.0.min.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/lessons\/lesson_directives.js",
-		"outputAbbreviatedPath": "\/js\/lessons\/min\/lesson_directives-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/lessons\/lesson_services.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/lessons\/lesson_services.js",
-		"outputAbbreviatedPath": "\/js\/lessons\/min\/lesson_services-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/lessons\/min\/applessons-min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/lessons\/min\/applessons-min.js",
-		"outputAbbreviatedPath": "\/js\/lessons\/min\/min\/applessons-min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/lessons\/min\/lesson_directives-min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/lessons\/min\/lesson_directives-min.js",
-		"outputAbbreviatedPath": "\/js\/lessons\/min\/min\/lesson_directives-min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/lessons\/min\/lesson_services-min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/lessons\/min\/lesson_services-min.js",
-		"outputAbbreviatedPath": "\/js\/lessons\/min\/min\/lesson_services-min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/lessons\/min\/services-min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/lessons\/min\/services-min.js",
-		"outputAbbreviatedPath": "\/js\/lessons\/min\/min\/services-min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/lessons\/services.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/lessons\/services.js",
-		"outputAbbreviatedPath": "\/js\/lessons\/min\/services-min.js",
+		"inputAbbreviatedPath": "\/js\/libraries\/jquery-1.11.0.min.js",
+		"outputAbbreviatedPath": "\/js\/libraries\/min\/jquery-1.11.0.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -452,12 +452,23 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/structure.js": {
+	"\/js\/services\/lesson-category-service.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/structure.js",
-		"outputAbbreviatedPath": "\/js\/min\/structure-min.js",
+		"inputAbbreviatedPath": "\/js\/services\/lesson-category-service.js",
+		"outputAbbreviatedPath": "\/js\/services\/min\/lesson-category-service-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/services\/lesson-service.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/services\/lesson-service.js",
+		"outputAbbreviatedPath": "\/js\/services\/min\/lesson-service-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -469,7 +480,7 @@
 		"disableJavascript": 0,
 		"fileType": 1,
 		"ieCompatibility": 1,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/less\/app_variables.less",
 		"outputAbbreviatedPath": "\/css\/app_variables.css",
@@ -1923,6 +1934,26 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/less\/lesson.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/less\/lesson.less",
+		"outputAbbreviatedPath": "\/css\/lesson.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
 	"\/less\/login.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
@@ -1995,65 +2026,74 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
-	"\/views\/templates\/intermediate\/chords.html": {
+	"\/views\/templates\/lesson_templates\/chords.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/views\/templates\/intermediate\/chords.html",
+		"inputAbbreviatedPath": "\/views\/templates\/lesson_templates\/chords.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/views\/templates\/intermediate\/scales.html": {
+	"\/views\/templates\/lesson_templates\/left_categories.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/views\/templates\/intermediate\/scales.html",
+		"inputAbbreviatedPath": "\/views\/templates\/lesson_templates\/left_categories.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/views\/templates\/structure\/footer.html": {
+	"\/views\/templates\/lesson_templates\/lesson_detail.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/views\/templates\/structure\/footer.html",
+		"inputAbbreviatedPath": "\/views\/templates\/lesson_templates\/lesson_detail.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/views\/templates\/structure\/header.html": {
+	"\/views\/templates\/lesson_templates\/scales.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/views\/templates\/structure\/header.html",
+		"inputAbbreviatedPath": "\/views\/templates\/lesson_templates\/scales.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/views\/templates\/structure\/index.html": {
+	"\/views\/templates\/page_structure\/footer.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/views\/templates\/structure\/index.html",
+		"inputAbbreviatedPath": "\/views\/templates\/page_structure\/footer.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/views\/templates\/structure\/lesson_detail.html": {
+	"\/views\/templates\/page_structure\/header.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/views\/templates\/structure\/lesson_detail.html",
+		"inputAbbreviatedPath": "\/views\/templates\/page_structure\/header.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/views\/templates\/structure\/login.html": {
+	"\/views\/templates\/page_templates\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/views\/templates\/structure\/login.html",
+		"inputAbbreviatedPath": "\/views\/templates\/page_templates\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/views\/templates\/page_templates\/login.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/views\/templates\/page_templates\/login.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

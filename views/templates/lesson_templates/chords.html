@@ -1,0 +1,26 @@
+<div id="lesson-list">
+    <!-- <p ng-show="main.user.loggedIn">
+    This is the chords sectionasd
+    </p> -->
+    <div ng-repeat="section in categorySections" class="row-flex row-flex-wrap">
+        <div class="flex-col lesson-section col-md-12">
+            <h2>{{ section.title }}</h2>
+            <p>{{ section.description }}</p>
+        </div>
+        <div ng-repeat="lesson in section.lessons" class="col-md-3">
+            <div class="panel flex-col">
+                <div class="panel-title">
+                    <h3>{{ lesson.title }}</h3>
+                    <small>{{ lesson.date }}</small>
+                </div>
+                <div class="panel-body flex-grow">
+                    <p>{{ lesson.shortDescription }}</p>
+                </div>
+                <div class="panel-footer">
+                    <a href="#/chords/{{ lesson.id }}"><i class="fa fa-angle-right"></i> Continue</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

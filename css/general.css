@@ -1,12 +1,3 @@
-#login-form {
-  box-shadow: 0px 1px 2px rgba(33, 49, 58, 0.3);
-  padding: 30px;
-}
-#login-form label {
-  position: absolute;
-  transform: translateY(6px);
-  left: 40px;
-}
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -1095,12 +1086,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
+  color: #4A90E2;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #23527c;
+  color: #1f69c1;
   text-decoration: underline;
 }
 a:focus {
@@ -3407,7 +3398,7 @@ fieldset[disabled] .btn-danger.focus {
   background-color: #fff;
 }
 .btn-link {
-  color: #337ab7;
+  color: #4A90E2;
   font-weight: normal;
   border-radius: 0;
 }
@@ -3428,7 +3419,7 @@ fieldset[disabled] .btn-link {
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #23527c;
+  color: #1f69c1;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -4008,7 +3999,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #337ab7;
+  border-color: #4A90E2;
 }
 .nav .nav-divider {
   height: 1px;
@@ -4725,7 +4716,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: 6px 12px;
   line-height: 1.42857143;
   text-decoration: none;
-  color: #337ab7;
+  color: #4A90E2;
   background-color: #fff;
   border: 1px solid #ddd;
   margin-left: -1px;
@@ -4746,7 +4737,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li > a:focus,
 .pagination > li > span:focus {
   z-index: 2;
-  color: #23527c;
+  color: #1f69c1;
   background-color: #eeeeee;
   border-color: #ddd;
 }
@@ -4946,7 +4937,7 @@ a.badge:focus {
 }
 .list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #337ab7;
+  color: #4A90E2;
   background-color: #fff;
 }
 .list-group-item > .badge {
@@ -5021,7 +5012,7 @@ a.badge:focus {
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #337ab7;
+  border-color: #4A90E2;
 }
 .thumbnail .caption {
   padding: 9px;
@@ -6745,6 +6736,104 @@ button.close {
     display: none !important;
   }
 }
+/*Page specific*/
+#login-form {
+  box-shadow: 0px 1px 2px rgba(33, 49, 58, 0.3);
+  padding: 30px;
+}
+#login-form label {
+  position: absolute;
+  transform: translateY(6px);
+  left: 40px;
+}
+#lesson-list {
+  position: relative;
+}
+@media (min-width: 992px) {
+  #lesson-list .lesson-section {
+    padding-left: 85px;
+  }
+}
+#lesson-list .col-md-12,
+#lesson-list .col-md-3 {
+  background-color: #f0f6fd;
+}
+#lesson-list h3,
+#lesson-list h2 {
+  color: #3C4D68;
+}
+#lesson_container {
+  background-color: #f0f6fd;
+  overflow: auto;
+}
+#lesson_container .detailed-lesson {
+  -webkit-transition: left 0.5s ease-in-out;
+  -o-transition: left 0.5s ease-in-out;
+  transition: left 0.5s ease-in-out;
+}
+@media (min-width: 768px) {
+  #lesson_container .detailed-lesson {
+    padding: 0 45px;
+  }
+}
+#lesson_container .left-lessons.in {
+  left: 0px;
+}
+#lesson_container .left-lessons {
+  -webkit-transition: left 0.5s ease-in-out;
+  -o-transition: left 0.5s ease-in-out;
+  transition: left 0.5s ease-in-out;
+  background-color: #3C4D68;
+  position: relative;
+}
+@media (min-width: 768px) {
+  #lesson_container .left-lessons {
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+    left: -22%;
+  }
+}
+#lesson_container .left-lessons ul {
+  padding: 10px;
+}
+#lesson_container .left-lessons ul h4 {
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}
+#lesson_container .left-lessons ul li {
+  padding: 5px 0;
+}
+#lesson_container .left-lessons ul li > a {
+  padding-left: 15px;
+  color: #fff;
+}
+#lesson_container .left-lessons ul .active > a {
+  color: #50E3C2;
+}
+#lesson_container .left-lessons .close {
+  opacity: 1;
+  color: white;
+  text-shadow: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+#lesson_container .left-lessons .close .fa:focus {
+  outline: none;
+}
+#lesson_container .open {
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+  text-shadow: none;
+  position: absolute;
+  left: 0;
+  top: 80px;
+  border: none;
+}
+/*@app-primary: #945aff;
+@gray: #414141;
+@light-gray: #ECECEC;*/
 @font-face {
   font-family: 'Proxima-light';
   src: url("../fonts/Proxima Nova Alt Light.otf");
@@ -6767,12 +6856,67 @@ span,
 small {
   font-family: 'Proxima-light', sans-serif;
 }
+.row-flex,
+.row-flex > div[class*='col-'] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1 1 auto;
+}
+.row-flex-wrap {
+  -webkit-flex-flow: row wrap;
+  align-content: flex-start;
+  flex: 0;
+}
+.row-flex > div[class*='col-'],
+.container-flex > div[class*='col-'] {
+  margin: -0.2px;
+  /* hack adjust for wrapping */
+}
+.container-flex > div[class*='col-'] div,
+.row-flex > div[class*='col-'] div {
+  width: 100%;
+}
+.flex-col {
+  display: flex;
+  display: -webkit-flex;
+  flex: 1 100%;
+  flex-flow: column nowrap;
+}
+.flex-grow {
+  display: flex;
+  -webkit-flex: 2;
+  flex: 2;
+}
 a {
   color: #945aff;
 }
 a:hover {
   color: #414141;
   text-decoration: none;
+}
+.panel {
+  background-color: #fff;
+  border-radius: 0;
+  border: none;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+.panel .panel-title {
+  padding: 5px 15px 0 15px;
+}
+.panel .panel-title small {
+  font-size: 12px;
+  color: #777777;
+}
+.panel .panel-title h4 {
+  margin-bottom: 0;
+  color: #3C4D68;
+}
+.panel .panel-footer {
+  background-color: transparent;
 }
 header .navbar-default {
   border: none;
@@ -6916,85 +7060,6 @@ header #right_menu {
   header #right_menu {
     float: left;
   }
-}
-main #lesson-list {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  position: relative;
-}
-@media (min-width: 768px) {
-  main #lesson-list .lesson-tile {
-    /*display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            position: static;*/
-    /*margin-bottom: -99999px;
-                padding-bottom: 99999px;*/
-    border: 1px solid #eeeeee;
-  }
-}
-main #lesson_container {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-@media (min-width: 768px) {
-  main #lesson_container {
-    flex-flow: row nowrap;
-  }
-}
-main #lesson_container .detailed-lesson {
-  -webkit-transition: left 0.5s ease-in-out;
-  -o-transition: left 0.5s ease-in-out;
-  transition: left 0.5s ease-in-out;
-}
-main #lesson_container .left-lessons.in {
-  left: 0px;
-}
-main #lesson_container .left-lessons {
-  -webkit-transition: left 0.5s ease-in-out;
-  -o-transition: left 0.5s ease-in-out;
-  transition: left 0.5s ease-in-out;
-  background-color: #945aff;
-  position: relative;
-}
-@media (min-width: 768px) {
-  main #lesson_container .left-lessons {
-    margin-bottom: -99999px;
-    padding-bottom: 99999px;
-    left: -25%;
-  }
-}
-main #lesson_container .left-lessons ul {
-  padding: 30px;
-}
-main #lesson_container .left-lessons ul li {
-  padding: 10px 0;
-}
-main #lesson_container .left-lessons ul li > a {
-  color: #fff;
-}
-main #lesson_container .left-lessons .close {
-  opacity: 1;
-  color: white;
-  text-shadow: none;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
-main #lesson_container .open {
-  width: 40px;
-  height: 40px;
-  opacity: 1;
-  text-shadow: none;
-  position: absolute;
-  left: 0;
-  top: 80px;
-  border: none;
 }
 /*Footer*/
 footer {

@@ -1,0 +1,11 @@
+{
+    'primary': {
+        host: 'arculateshonlapkeszites.hu',
+        username: 'johnsmith',
+        password: 'secretpassword',
+        path: '/www/',
+
+        upload_on_save: true,
+        tls: true
+    }
+}

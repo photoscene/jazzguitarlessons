@@ -3,18 +3,21 @@
         "id": 1,
         "active": true,
         "name": "Chords",
-        "url": "/chords"
+        "url": "/chords",
+        "parent": "/intermediate"
     },
     {
         "id": 2,
         "active": true,
         "name": "Scales",
-        "url": "/scales"
+        "url": "/scales",
+        "parent": "/intermediate"
     },
     {
         "id": 3,
         "active": true,
         "name": "Technique",
-        "url": "/technique"
+        "url": "/technique",
+        "parent": "/intermediate"
     }
 ]

@@ -1,0 +1,22 @@
+<div id="lesson_container">
+    <div class="lesson">
+        <lesson-category-panel class="col-md-3 left-lessons in" ng-controller="lessonCtrl"></lesson-category-panel>
+        <!-- <ng-include src="'views/templates/lesson_templates/left_categories.html'"></ng-include> -->
+        <div class="col-md-9 detailed-lesson">
+            <div class="row">
+                <div class="col-md-12 mt32">
+                    <button class="btn btn-primary">Previous lesson</button>
+                    <button class="btn btn-success pull-right">Previous lesson</button>
+                </div>
+            </div>
+
+            <h2><pre>{{ lesson | json }}</pre></h2>
+            <!-- <p><small>Date added: {{ lesson.dateOfCreation | date : format : shortDate }}</small></p> -->
+            <h2>{{ lesson.title }}</h2>
+            <p>{{lesson.description}}</p>
+            <div>{{lesson.videoIframe}}</div>
+            <div lesson-youtube code="code"></div>
+            <!-- <a href=" {{ lesson.videoUrl }} ">This is the link</a> -->
+        </div>
+    </div>
+</div>

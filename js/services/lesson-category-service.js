@@ -1,12 +1,12 @@
 (function(){
-    angular.module('services', ['backand'])
+    angular.module('categoryServices', ['backand'])
     .service('categoryService', function ($http) {
         
         getMainCategories = function () {
             return $http.get('/js/json/main_categories.json');
         };
-        getSubCategories = function () {
-            return $http.get('/js/json/subcategories.json');
+        getSubCategories = function (lessonParent) {
+            return $http.get('/js/json/subcategory-' + lessonParent + '.json');
         };
         
         return {

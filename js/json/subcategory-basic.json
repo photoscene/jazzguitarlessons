@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "active": true,
+        "name": "C major",
+        "url": "/c-major",
+        "parent": "/basic"
+    },
+    {
+        "id": 2,
+        "active": true,
+        "name": "D major",
+        "url": "/d-major",
+        "parent": "/basic"
+    },
+    {
+        "id": 3,
+        "active": true,
+        "name": "E major",
+        "url": "/e-major",
+        "parent": "/basic"
+    }
+]

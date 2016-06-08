@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "active": true,
+        "name": "Altered Scale1",
+        "url": "/altered-1",
+        "parent": "/advanced"
+    },
+    {
+        "id": 2,
+        "active": true,
+        "name": "Altered Scale2",
+        "url": "/altered-1",
+        "parent": "/advanced"
+    },
+    {
+        "id": 3,
+        "active": true,
+        "name": "Altered Scale3",
+        "url": "/altered-1",
+        "parent": "/advanced"
+    }
+]

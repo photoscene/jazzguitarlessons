@@ -1,11 +1,16 @@
 @import "vendor-prefixes.less";
 @import "/bootstrap/variables.less";
-@import "login.less";
+@import "app_variables.less";
 @import '/bootstrap/bootstrap.less';
 
-@app-primary: #945aff;
+/*Page specific*/
+
+@import "login.less";
+@import "lesson.less";
+
+/*@app-primary: #945aff;
 @gray: #414141;
-@light-gray: #ECECEC;
+@light-gray: #ECECEC;*/
 
 @font-face {
   font-family: 'Proxima-light';
@@ -32,12 +37,69 @@ h1, h2, h3, h4, h5, h6, a, p, span, small {
 
 ///////// General styles ///////////
 
+.row-flex, .row-flex > div[class*='col-'] {  
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex:1 1 auto;
+}
+
+.row-flex-wrap {
+    -webkit-flex-flow: row wrap;
+    align-content: flex-start;
+    flex:0;
+}
+
+.row-flex > div[class*='col-'], .container-flex > div[class*='col-'] {
+     margin:-.2px; /* hack adjust for wrapping */
+}
+
+.container-flex > div[class*='col-'] div,.row-flex > div[class*='col-'] div {
+    width:100%;
+}
+
+.flex-col {
+    display: flex;
+    display: -webkit-flex;
+    flex: 1 100%;
+    flex-flow: column nowrap;
+}
+
+.flex-grow {
+    display: flex;
+    -webkit-flex: 2;
+    flex: 2;
+}
+
 a {
     color: @app-primary;
     &:hover {
         color: @gray;
         text-decoration: none;
     }
+}
+.panel {
+    .panel-title {
+        padding: 5px 15px 0 15px;
+        small {
+            font-size: 12px;
+            color: @gray-light;
+        }
+        h4 {
+            margin-bottom: 0;
+            color: @app-secondary;
+        }
+    }
+    .panel-footer {
+        background-color: transparent;
+    }
+    background-color: #fff;
+    border-radius: 0;
+    border: none;
+    .box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25));
+    
 }
 header {
     .navbar-default {
@@ -155,77 +217,7 @@ header {
 }
 
 main {
-    #lesson-list {
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        position: relative;
-        .lesson-tile {
-            @media (min-width: @screen-sm-min) {
-                /*display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            position: static;*/
-                /*margin-bottom: -99999px;
-                padding-bottom: 99999px;*/
-                border: 1px solid @gray-lighter; 
-            }
-        }
-    }
-    #lesson_container {
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        @media (min-width: @screen-sm-min) {
-            flex-flow: row nowrap;
-        }
-        .detailed-lesson {
-            .transition(left 0.5s ease-in-out);
-        }
-        .left-lessons.in {
-            left: 0px;
-        }
-        .left-lessons {
-            @media (min-width: @screen-sm-min) {
-                margin-bottom: -99999px;
-                padding-bottom: 99999px;
-                left: -25%;
-            }
-            .transition(left 0.5s ease-in-out);
-            background-color: @app-primary;
-            position: relative;
-            ul {
-                padding: 30px;
-                li {
-                    padding: 10px 0;
-                    > a {
-                        color: #fff;
-                    }
-                }
-            }
-            .close {
-                opacity: 1;
-                color: white;
-                text-shadow: none;
-                position: absolute;
-                right: 10px;
-                top: 10px;
-            }
-        }
-        .open {
-            width: 40px;
-            height: 40px;
-            opacity: 1;
-            text-shadow: none;
-            position: absolute;
-            left: 0;
-            top: 80px;
-            border: none;
-        }
-    }
+    
 }
 
 /*Footer*/
