@@ -1,1 +1,1 @@
-!function(){angular.module("guitarlessons",["appStructure","ngRoute","backand"])}();
+!function(){angular.module("models",["pageStructure","youtubeCode","leftCategoryPanel","showHideTabs","activeNavs","mainController","loginController","appController","appLessons","ngRoute","backand"]).config(function(o){})}();

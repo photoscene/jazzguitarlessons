@@ -6738,13 +6738,59 @@ button.close {
 }
 /*Page specific*/
 #login-form {
+  background-color: #3C4D68;
   box-shadow: 0px 1px 2px rgba(33, 49, 58, 0.3);
   padding: 30px;
+  color: white;
 }
 #login-form label {
-  position: absolute;
+  position: relative;
   transform: translateY(6px);
-  left: 40px;
+  left: 10px;
+}
+#login-form input {
+  background-color: transparent;
+  margin: 10px 0;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  height: 40px;
+  width: 100%;
+}
+#login-form .field-wrap:nth-child(2),
+#login-form .field-wrap:first-child {
+  display: inline-block;
+  width: 49%;
+}
+#login-form .nav-tabs {
+  border-bottom: none;
+}
+#login-form .nav-tabs li a {
+  font-size: 25px;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 0;
+  padding: 10px 100px;
+}
+#login-form .nav-tabs li a:hover {
+  background-color: transparent;
+  border: none;
+}
+#login-form .nav-tabs li.active > a {
+  background-color: #50E3C2;
+  border: none;
+  color: white;
+}
+#login-form .nav-tabs > li,
+#login-form .nav-pills > li {
+  float: none;
+  display: inline-block;
+  *display: inline;
+  /* ie7 fix */
+  zoom: 1;
+  /* hasLayout ie7 trigger */
+}
+#login-form .nav-tabs,
+#login-form .nav-pills {
+  text-align: center;
 }
 #lesson-list {
   position: relative;
@@ -6762,24 +6808,39 @@ button.close {
 #lesson-list h2 {
   color: #3C4D68;
 }
+#lesson_container,
+#lesson_container .lesson {
+  overflow: auto;
+  min-height: 85vh;
+}
 #lesson_container {
   background-color: #f0f6fd;
-  overflow: auto;
 }
-#lesson_container .detailed-lesson {
+#lesson_container .col-md-9 {
+  padding: 0;
   -webkit-transition: left 0.5s ease-in-out;
   -o-transition: left 0.5s ease-in-out;
   transition: left 0.5s ease-in-out;
 }
+#lesson_container .col-md-9 .detailed-lesson {
+  background-color: #fff;
+}
 @media (min-width: 768px) {
-  #lesson_container .detailed-lesson {
-    padding: 0 45px;
+  #lesson_container .col-md-9 .detailed-lesson {
+    margin: 20px;
+    padding: 20px;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   }
+}
+#lesson_container .lesson {
+  display: inline-flex;
 }
 #lesson_container .left-lessons.in {
   left: 0px;
 }
 #lesson_container .left-lessons {
+  left: -22%;
   -webkit-transition: left 0.5s ease-in-out;
   -o-transition: left 0.5s ease-in-out;
   transition: left 0.5s ease-in-out;
@@ -6788,9 +6849,8 @@ button.close {
 }
 @media (min-width: 768px) {
   #lesson_container .left-lessons {
-    margin-bottom: -99999px;
-    padding-bottom: 99999px;
-    left: -22%;
+    /*margin-bottom: -99999px;
+            padding-bottom: 99999px;*/
   }
 }
 #lesson_container .left-lessons ul {
@@ -6831,9 +6891,6 @@ button.close {
   top: 80px;
   border: none;
 }
-/*@app-primary: #945aff;
-@gray: #414141;
-@light-gray: #ECECEC;*/
 @font-face {
   font-family: 'Proxima-light';
   src: url("../fonts/Proxima Nova Alt Light.otf");
@@ -6917,6 +6974,9 @@ a:hover {
 }
 .panel .panel-footer {
   background-color: transparent;
+}
+body {
+  background-color: #f0f6fd;
 }
 header .navbar-default {
   border: none;
@@ -7060,6 +7120,9 @@ header #right_menu {
   header #right_menu {
     float: left;
   }
+}
+main {
+  min-height: 85vh;
 }
 /*Footer*/
 footer {

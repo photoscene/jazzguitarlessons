@@ -12,23 +12,35 @@
         color: @app-secondary;
     }
 }
+#lesson_container, #lesson_container .lesson {
+    overflow: auto;
+    min-height: 85vh;
+}
 #lesson_container {
     background-color: @link-color-light;
-    overflow: auto;
-    .detailed-lesson {
+    .col-md-9 {
+        padding: 0;
         .transition(left 0.5s ease-in-out);
-        @media (min-width: @screen-sm-min) {
-            padding: 0 45px;
+        .detailed-lesson {
+            background-color: #fff;
+            @media (min-width: @screen-sm-min) {
+                margin: 20px;
+                padding: 20px;
+                .box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25));
+            }
         }
+    }
+    .lesson {
+        display: inline-flex;  
     }
     .left-lessons.in {
         left: 0px;
     }
     .left-lessons {
+        left: -22%;
         @media (min-width: @screen-sm-min) {
-            margin-bottom: -99999px;
-            padding-bottom: 99999px;
-            left: -22%;
+            /*margin-bottom: -99999px;
+            padding-bottom: 99999px;*/
         }
         .transition(left 0.5s ease-in-out);
         background-color: @app-secondary;

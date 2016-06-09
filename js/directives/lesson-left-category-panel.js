@@ -8,7 +8,7 @@
             templateUrl: "views/templates/lesson_templates/left_categories.html",
             link: function (scope, elem, button) {
                 var button = elem.find('.close .fa'),
-                    lessonContainer = $('.detailed-lesson');
+                    lessonContainer = $('.lesson .col-md-9');
                 button.bind('click', function() {
                     elem.toggleClass('in');
                     if (!elem.hasClass('in')) {

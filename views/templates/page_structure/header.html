@@ -15,11 +15,11 @@
 
             <!-- Left Navbar -->
 
-            <div class="col-md-8" id="top_menu">
+            <div class="col-md-8" id="top_menu" ng-init="obj = {}">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#/"><img src="img/home_icon.png" alt=""/></a></li>
-                    <li ng-repeat="category in mainCategories" ng-class="{ active: $index == selected }">
-                        <a ng-click="select($index)" href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{category.name}}</a>
+                    <li><a href="#/"><img src="img/home_icon.png" alt=""/></a></li>
+                    <li ng-repeat="category in mainCategories" activenav="" active="obj.active"> <!-- ng-class="{ active: $index == selected }" -->
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{category.name}}</a> <!-- ng-click="select($index)" -->
                         <ul class="dropdown-menu">
                             <li ng-repeat="subcategory in subCategories">
                                 <a href="#{{subcategory.parent}}{{subcategory.url}}">{{subcategory.name}}</a>
@@ -97,11 +97,11 @@
                     <li ng-class="{ active:nav.isSelected(3) }">
                         <a href="#" ng-click="nav.selectNav(3)">{{mainCategories[2].name}}</a>
                     </li> -->
-                    <li ng-class="{ active: $index == selected }">
-                        <a href="#" ng-click="select($index)">Lick section</a>
+                    <li activenav="" active="obj.active"> <!-- ng-class="{ active: $index == selected }" -->
+                        <a href="#" >Lick section</a> <!-- ng-click="select($index)" -->
                     </li>
-                    <li ng-class="{ active: $index == selected }" ng-show="header.user.loggedIn">
-                        <a href="#" ng-click="select($index)">Memberships</a>
+                    <li ng-show="header.user.loggedIn" activenav="" active="obj.active"> <!-- ng-class="{ active: $index == selected }" -->
+                        <a href="#" >Memberships</a> <!-- ng-click="select($index)" -->
                     </li>
                 </ul>
             </div>

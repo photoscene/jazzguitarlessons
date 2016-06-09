@@ -1,31 +1,65 @@
-<div id="login-form" class="col-md-6 col-md-offset-3"> <!-- ng-show="main.user.loggedIn === false" -->
-    <p>Please log in first.</p>
-    <form action="/" method="post">
+<div id="login-form" class="col-md-6 col-md-offset-3 mt32" ng-controller="loginCtrl"> <!-- ng-show="main.user.loggedIn === false" -->
 
-        <div class="top-row">
-            <div class="field-wrap">
-                <label>First Name<span class="req">*</span>
-                </label>
-                <input type="text" required autocomplete="off" />
-            </div>
-            <div class="field-wrap">
-                <label>Last Name<span class="req">*</span>
-                </label>
-                <input type="text"required autocomplete="off"/>
-            </div>
-            <div class="field-wrap">
-                <label>Email Address<span class="req">*</span>
-                </label>
-                <input type="email"required autocomplete="off"/>
-            </div>
-            <div class="field-wrap">
-                <label>Set A Password<span class="req">*</span>
-                </label>
-                <input type="password"required autocomplete="off"/>
-            </div>
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active">
+            <a showtab="" href="/#signup" aria-controls="signup" role="tab" data-toggle="tab">Sign Up</a>
+        </li>
+        <li role="presentation">
+            <a showtab="" href="/#login" aria-controls="login" role="tab" data-toggle="tab">Log In</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="signup">
+
+            <h2 class="text-center">Please log in first.</h2>
+            <form action="/" method="post">
+                <div class="top-row">
+                    <div class="field-wrap">
+                        <label>First Name<span class="req">*</span>
+                        </label>
+                        <input type="text" required autocomplete="off" />
+                    </div>
+                    <div class="field-wrap pull-right">
+                        <label>Last Name<span class="req">*</span>
+                        </label>
+                        <input type="text"required autocomplete="off"/>
+                    </div>
+                    <div class="field-wrap">
+                        <label>Email Address<span class="req">*</span>
+                        </label>
+                        <input type="email"required autocomplete="off"/>
+                    </div>
+                    <div class="field-wrap">
+                        <label>Set A Password<span class="req">*</span>
+                        </label>
+                        <input type="password"required autocomplete="off"/>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Get Started</button>
+            </form>
+            
         </div>
+        <div role="tabpanel" class="tab-pane" id="login">
+            
+            <h2 class="text-center">Sign in</h2>
+            <form action="/" method="post">
+                <div class="top-row">
+                    <div class="field-wrap">
+                        <label>Email Address<span class="req">*</span>
+                        </label>
+                        <input type="email"required autocomplete="off"/>
+                    </div>
+                    <div class="field-wrap">
+                        <label>Set A Password<span class="req">*</span>
+                        </label>
+                        <input type="password"required autocomplete="off"/>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Log In</button>
+            </form>
 
-        <button type="submit" class="button button-block"/>Get Started</button>
+        </div>
+    </div>
 
-    </form>
 </div>
