@@ -16,6 +16,7 @@
         .then(function(result) {
             $scope.lesson = result.data;
             $scope.code = $scope.lesson.videoCode;
+            $scope.soundCloudCode = $scope.lesson.trackCode;
         });
 
         lessonService.getCategorySections()

@@ -210,6 +210,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/js\/controllers\/min\/main-controller-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/controllers\/min\/main-controller-min.js",
+		"outputAbbreviatedPath": "\/js\/controllers\/min\/min\/main-controller-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/js\/controllers\/nav-controller.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -298,6 +309,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/js\/directives\/soundcloud_code.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/directives\/soundcloud_code.js",
+		"outputAbbreviatedPath": "\/js\/directives\/min\/soundcloud_code-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/js\/directives\/youtube_code.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -371,6 +393,17 @@
 		"inputAbbreviatedPath": "\/js\/json\/main_categories.json",
 		"orderOutput": 0,
 		"outputAbbreviatedPath": "\/js\/json\/main_categories-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/js\/json\/subcategories.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/json\/subcategories.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/js\/json\/subcategories-min.json",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1

@@ -6,7 +6,7 @@
             return $http.get('/js/json/main_categories.json');
         };
         getSubCategories = function (lessonParent) {
-            return $http.get('/js/json/subcategory-' + lessonParent + '.json');
+            return $http.get('/js/json/subcategories.json');
         };
         
         return {

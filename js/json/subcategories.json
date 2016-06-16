@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "active": true,
+        "name": "Chords",
+        "url": "/chords"
+    },
+    {
+        "id": 2,
+        "active": true,
+        "name": "Scales",
+        "url": "/scales"
+    },
+    {
+        "id": 3,
+        "active": true,
+        "name": "Technique",
+        "url": "/technique"
+    }
+]

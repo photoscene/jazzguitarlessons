@@ -6913,6 +6913,37 @@ span,
 small {
   font-family: 'Proxima-light', sans-serif;
 }
+.btn {
+  border-radius: 0px;
+  padding: 15px 50px;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.btn-primary {
+  background-color: transparent;
+  border-color: white;
+  color: #50E3C2;
+}
+.btn-primary:hover {
+  background-color: transparent;
+}
+.btn-secondary {
+  background-color: transparent;
+  border-color: #3C4D68;
+  color: #777777;
+}
+.btn-secondary:hover {
+  background-color: transparent;
+}
+.btn-success {
+  background-color: transparent;
+  border-color: #3C4D68;
+  color: #50E3C2;
+}
+.btn-success:hover {
+  background-color: transparent;
+}
 .row-flex,
 .row-flex > div[class*='col-'] {
   display: -webkit-box;
@@ -6999,6 +7030,23 @@ header .navbar-default {
 header #main-navbar {
   overflow-y: visible;
 }
+header #main-navbar #top_menu > ul li a,
+header #main-navbar #right_menu > ul li a,
+header #main-navbar #top_menu .dropdown-menu li a,
+header #main-navbar #right_menu .dropdown-menu li a {
+  text-transform: uppercase;
+  color: white;
+  -webkit-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+header #main-navbar #top_menu > ul li a:hover,
+header #main-navbar #right_menu > ul li a:hover,
+header #main-navbar #top_menu .dropdown-menu li a:hover,
+header #main-navbar #right_menu .dropdown-menu li a:hover {
+  background-color: transparent;
+  color: #50E3C2;
+}
 header #main-navbar #top_menu > ul .active > a,
 header #main-navbar #right_menu > ul .active > a {
   background-color: transparent;
@@ -7036,19 +7084,17 @@ header #main-navbar #right_menu > ul li {
   header #main-navbar #top_menu > ul li,
   header #main-navbar #right_menu > ul li {
     display: inline-block;
-    height: 60px;
-    position: static;
+    /**/
     float: none;
   }
 }
-header #main-navbar #top_menu > ul li a,
-header #main-navbar #right_menu > ul li a {
-  text-transform: uppercase;
-  color: white;
-}
-header #main-navbar #top_menu > ul li a img,
-header #main-navbar #right_menu > ul li a img {
+header #main-navbar #top_menu > ul li img,
+header #main-navbar #right_menu > ul li img {
   max-height: 30px;
+}
+header #main-navbar #top_menu > ul li .dropdown-menu,
+header #main-navbar #right_menu > ul li .dropdown-menu {
+  background-color: #3C4D68;
 }
 header #main-navbar #top_menu > ul li .dropdown-menu li,
 header #main-navbar #right_menu > ul li .dropdown-menu li {
@@ -7056,7 +7102,7 @@ header #main-navbar #right_menu > ul li .dropdown-menu li {
 }
 header #main-navbar #top_menu > ul li .dropdown-menu li a,
 header #main-navbar #right_menu > ul li .dropdown-menu li a {
-  color: #777777;
+  color: white;
 }
 header #main-navbar #top_menu > ul li .dropdown-toggle .fa::before,
 header #main-navbar #right_menu > ul li .dropdown-toggle .fa::before {

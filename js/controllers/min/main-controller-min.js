@@ -1,0 +1,1 @@
+!function(){angular.module("mainController",["backand","categoryServices"]).controller("mainCtrl",function(){this.user=n});var n={loggedIn:!1}}();

@@ -18,92 +18,24 @@
             <div class="col-md-8" id="top_menu" ng-init="obj = {}">
                 <ul class="nav navbar-nav">
                     <li><a href="#/"><img src="img/home_icon.png" alt=""/></a></li>
-                    <li ng-repeat="category in mainCategories" activenav="" active="obj.active"> <!-- ng-class="{ active: $index == selected }" -->
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{category.name}}</a> <!-- ng-click="select($index)" -->
+                    <li><a href="#/">Pricing</a></li>
+                    <li><a href="#/">Why it works?</a></li>
+                    <li><a href="#/">Free tial</a></li>
+                    <li ng-repeat="category in mainCategories" activenav="" active="obj.active" ng-show="user.loggedIn">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{category.name}}</a>
                         <ul class="dropdown-menu">
                             <li ng-repeat="subcategory in subCategories">
-                                <a href="#{{subcategory.parent}}{{subcategory.url}}">{{subcategory.name}}</a>
+                                <a href="#{{subcategory.url}}">{{subcategory.name}}</a>
                             </li>
                         </ul>
                     </li>
-                    <!-- <li ng-class="{ active:nav.isSelected(1) }"><a href="#" ng-click="nav.selectNav(1)">{{nav.mainCategories[0].name}}</a></li>
-                    <li ng-class="{ active:nav.isSelected(2) }" class="dropdown">
-                        <a ng-click="nav.selectNav(2)" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{mainCategories[1].name}}<span class="fa"></span></a>
-                        <div class="dropdown-menu full-width-dropdown">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="row mb32">
-                                            <div class="col-md-2">
-                                                <img src="img/categories/icon_chord.png" alt="" class="img img-responsive category-img hidden-xs"/>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <a href="#/chords">Chords</a><br>
-                                                <span class="hidden-xs">Lorem ipsum dolor sit amet, nec an unum dictas. Sea exerci nullam ex, ad mel omittam legendos salutatus, eum ei regione sententiae. Cu eum odio nulla, et his nullam graece, tation alterum dolores cum ne.</span>
-                                            </div>
-                                        </div>
-                                        <div class="row mb32">
-                                            <div class="col-md-2">
-                                                <img src="img/categories/icon_chord.png" alt="" class="img img-responsive category-img hidden-xs"/>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <a href="#/scales">Scales</a><br>
-                                                <span class="hidden-xs">Lorem ipsum dolor sit amet, nec an unum dictas. Sea exerci nullam ex, ad mel omittam legendos salutatus, eum ei regione sententiae. Cu eum odio nulla, et his nullam graece, tation alterum dolores cum ne.</span>
-                                            </div>
-                                        </div>
-                                        <div class="row mb32">
-                                            <div class="col-md-2">
-                                                <img src="img/categories/icon_chord.png" alt="" class="img img-responsive category-img hidden-xs"/>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <a href="#">Technique</a><br>
-                                                <span class="hidden-xs">Lorem ipsum dolor sit amet, nec an unum dictas. Sea exerci nullam ex, ad mel omittam legendos salutatus, eum ei regione sententiae. Cu eum odio nulla, et his nullam graece, tation alterum dolores cum ne.</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="row mb32">
-                                            <div class="col-md-2">
-                                                <img src="img/categories/icon_chord.png" alt="" class="img img-responsive category-img hidden-xs"/>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <a href="#">Arpeggios</a><br>
-                                                <span class="hidden-xs">Lorem ipsum dolor sit amet, nec an unum dictas. Sea exerci nullam ex, ad mel omittam legendos salutatus, eum ei regione sententiae. Cu eum odio nulla, et his nullam graece, tation alterum dolores cum ne.</span>
-                                            </div>
-                                        </div>
-                                        <div class="row mb32">
-                                            <div class="col-md-2">
-                                                <img src="img/categories/icon_chord.png" alt="" class="img img-responsive category-img hidden-xs"/>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <a href="scales">Fretboard Knowledge</a><br>
-                                                <span class="hidden-xs">Lorem ipsum dolor sit amet, nec an unum dictas. Sea exerci nullam ex, ad mel omittam legendos salutatus, eum ei regione sententiae. Cu eum odio nulla, et his nullam graece, tation alterum dolores cum ne.</span>
-                                            </div>
-                                        </div>
-                                        <div class="row mb32">
-                                            <div class="col-md-2">
-                                                <img src="img/categories/icon_chord.png" alt="" class="img img-responsive category-img hidden-xs"/>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <a href="#">Picking Techniques</a><br>
-                                                <span class="hidden-xs">Lorem ipsum dolor sit amet, nec an unum dictas. Sea exerci nullam ex, ad mel omittam legendos salutatus, eum ei regione sententiae. Cu eum odio nulla, et his nullam graece, tation alterum dolores cum ne.</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <li activenav="" active="obj.active" ng-show="user.loggedIn">
+                        <a href="#" >Lick section</a>
                     </li>
-                    <li ng-class="{ active:nav.isSelected(3) }">
-                        <a href="#" ng-click="nav.selectNav(3)">{{mainCategories[2].name}}</a>
-                    </li> -->
-                    <li activenav="" active="obj.active"> <!-- ng-class="{ active: $index == selected }" -->
-                        <a href="#" >Lick section</a> <!-- ng-click="select($index)" -->
+                    <li activenav="" active="obj.active" ng-show="user.loggedIn">
+                        <a href="#" >Memberships</a>
                     </li>
-                    <li ng-show="header.user.loggedIn" activenav="" active="obj.active"> <!-- ng-class="{ active: $index == selected }" -->
-                        <a href="#" >Memberships</a> <!-- ng-click="select($index)" -->
-                    </li>
-                </ul>
+                <ul>
             </div>
 
             <!-- Right Navbar -->

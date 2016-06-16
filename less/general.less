@@ -31,6 +31,38 @@ h1, h2, h3, h4, h5, h6, a, p, span, small {
     font-family: 'Proxima-light', sans-serif;
 }
 
+.btn {
+    border-radius: 0px;
+    padding: 15px 50px;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+.btn-primary {
+    background-color: transparent;
+    border-color: white;
+    color: @active-color;
+    &:hover {
+        background-color: transparent;
+    }
+}
+.btn-secondary {
+    background-color: transparent;
+    border-color: @app-secondary;
+    color: @gray-light;
+    &:hover {
+        background-color: transparent;
+    }
+}
+.btn-success {
+    background-color: transparent;
+    border-color: @app-secondary;
+    color: @active-color;
+    &:hover {
+        background-color: transparent;
+    }
+}
+
 ///////// General styles ///////////
 
 .row-flex, .row-flex > div[class*='col-'] {  
@@ -116,6 +148,19 @@ header {
     }
     #main-navbar {
         overflow-y: visible;
+        #top_menu > ul, #right_menu > ul, #top_menu .dropdown-menu, #right_menu .dropdown-menu {
+            li {
+                a {
+                    text-transform: uppercase;
+                    color: white;
+                    .transition(color .2s ease-in-out);
+                    &:hover {
+                        background-color: transparent;
+                        color: @active-color;
+                    }
+                }
+            }
+        }
         #top_menu > ul, #right_menu > ul {
             .active > a {
                 background-color: transparent;
@@ -124,22 +169,20 @@ header {
             li {
                 @media (min-width: @screen-sm-min) {
                     display: inline-block;
-                    height: 60px;
-                    position: static;
+                    /**/
                     float: none;
                 }
-                a {
-                    text-transform: uppercase;
-                    color: white;
                     img {
                         max-height: 30px;
                     }
-                }
-                .dropdown-menu li {
-                    display: block;
-                    a {
-                        color: @gray-light;
-                    }
+                .dropdown-menu {
+                    background-color: @app-secondary;
+                    li {
+                        display: block;
+                        a {
+                            color: white
+                        }
+                    } 
                 } 
                 .dropdown-toggle {
                     .fa::before {
