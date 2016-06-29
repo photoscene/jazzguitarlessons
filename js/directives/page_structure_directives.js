@@ -14,14 +14,14 @@
             
             templateUrl: "views/templates/page_structure/header.html",
             controller: ['$scope', '$filter', function ($scope, $filter) {
-                this.user = users;
+                //this.user = users;
             }],
             controllerAs: 'header' // this is the alias from this one: ng-controller="headerCtrl as header"
         };
     });
 
-    var users = {
+    /*var users = {
         loggedIn: true
-    };
+    };*/
 
 })();

@@ -1,0 +1,55 @@
+#banner {
+    background-image: url(../../img/banner_img.jpg);
+    background-size: auto 100%;
+    background-position: top;
+    height: 689px;
+    position: relative;
+    h1, h2, h3 {
+        color: white;
+    }
+    h2 {
+        font-family: 'Proxima-bold', sans-serif;
+        font-size: 55px;
+    }
+    h2:fist-child {
+        line-height: .9;
+    }
+    h1 {
+        font-size: 36px;
+    }
+    h3 {
+        font-size: 37px;
+        margin-top: 0;
+        line-height: .4;
+    }
+    .btn-secondary {
+        border-color: white;
+        color: @active-color;
+        .transition(all .2s ease-in-out);
+        &:hover {
+            border-color: @active-color;
+            color: white;
+        }
+    }
+    a {
+        float: left;
+        color: @active-color;
+    }
+    .features {
+        height: 80px;
+        background-color: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        bottom: 0px;
+    }
+    .banner-feature {
+        margin-top: 20px;
+        img {
+            margin-right: 20px;
+        }
+    }
+
+    @media (max-width: @screen-xs-max) {
+        background: linear-gradient(150deg, #875A7B 20%, #62495B 80%) !important;
+        background-image: none;
+    }
+}

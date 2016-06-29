@@ -1,15 +1,37 @@
-<div id="login-form" class="col-md-6 col-md-offset-3 mt32" ng-controller="loginCtrl"> <!-- ng-show="main.user.loggedIn === false" -->
+<div id="login-form" class="col-md-6 col-md-offset-3 mt32" ng-controller="loginCtrl">
 
     <ul class="nav nav-tabs">
         <li role="presentation" class="active">
-            <a showtab="" href="/#signup" aria-controls="signup" role="tab" data-toggle="tab">Sign Up</a>
+            <a showtab="" href="/#login" aria-controls="login" role="tab" data-toggle="tab">Log In</a>
         </li>
         <li role="presentation">
-            <a showtab="" href="/#login" aria-controls="login" role="tab" data-toggle="tab">Log In</a>
+            <a showtab="" href="/#signup" aria-controls="signup" role="tab" data-toggle="tab">Sign Up</a>
         </li>
     </ul>
 
     <div class="tab-content">
+        
+        <div role="tabpanel" class="tab-pane" id="login">
+            
+            <h2 class="text-center">Sign in</h2>
+            <form action="/" method="post" name="userdetails.form">
+                <div class="top-row">
+                    <div class="field-wrap">
+                        <label>Email Address<span class="req">*</span>
+                        </label>
+                        <input type="email" ng-model="userdetails.userName" required autocomplete="off"/>
+                    </div>
+                    <div class="field-wrap">
+                        <label>Password<span class="req">*</span>
+                        </label>
+                        <input type="password" ng-model="userdetails.password" required autocomplete="off"/>
+                    </div>
+                </div>
+                <div class="click" ng-click="login()">click me</div>
+                <button id="login-btn" type="submit" class="btn btn-primary center-block">Log In</button>
+            </form>
+
+        </div>
         <div role="tabpanel" class="tab-pane active" id="signup">
 
             <h2 class="text-center">Please log in first.</h2>
@@ -23,43 +45,24 @@
                     <div class="field-wrap pull-right">
                         <label>Last Name<span class="req">*</span>
                         </label>
-                        <input type="text"required autocomplete="off"/>
+                        <input type="text" required autocomplete="off"/>
                     </div>
                     <div class="field-wrap">
                         <label>Email Address<span class="req">*</span>
                         </label>
-                        <input type="email"required autocomplete="off"/>
+                        <input type="email" required autocomplete="off"/>
                     </div>
                     <div class="field-wrap">
                         <label>Set A Password<span class="req">*</span>
                         </label>
-                        <input type="password"required autocomplete="off"/>
+                        <input type="password" required autocomplete="off"/>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary center-block">Get Started</button>
+                <button id="reg-btn" type="submit" class="btn btn-primary center-block">Get Started</button>
             </form>
             
         </div>
-        <div role="tabpanel" class="tab-pane" id="login">
-            
-            <h2 class="text-center">Sign in</h2>
-            <form action="/" method="post">
-                <div class="top-row">
-                    <div class="field-wrap">
-                        <label>Email Address<span class="req">*</span>
-                        </label>
-                        <input type="email"required autocomplete="off"/>
-                    </div>
-                    <div class="field-wrap">
-                        <label>Set A Password<span class="req">*</span>
-                        </label>
-                        <input type="password"required autocomplete="off"/>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary center-block">Log In</button>
-            </form>
 
-        </div>
     </div>
 
 </div>

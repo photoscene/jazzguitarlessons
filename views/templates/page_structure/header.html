@@ -15,12 +15,15 @@
 
             <!-- Left Navbar -->
 
-            <div class="col-md-8" id="top_menu" ng-init="obj = {}">
+            <div class="col-md-10" id="top_menu" ng-init="obj = {}">
                 <ul class="nav navbar-nav">
                     <li><a href="#/"><img src="img/home_icon.png" alt=""/></a></li>
-                    <li><a href="#/">Pricing</a></li>
-                    <li><a href="#/">Why it works?</a></li>
-                    <li><a href="#/">Free tial</a></li>
+                    <li activenav="" active="obj.active"><a href="#/">Why it works?</a></li>
+                    <li activenav="" active="obj.active"><a href="#/">Pricing</a></li>
+                    <li activenav="" active="obj.active"><a href="#/">Free tial</a></li>
+                    <li activenav="" active="obj.active">
+                        <a href="#" >Memberships</a>
+                    </li>
                     <li ng-repeat="category in mainCategories" activenav="" active="obj.active" ng-show="user.loggedIn">
                         <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{category.name}}</a>
                         <ul class="dropdown-menu">
@@ -29,21 +32,18 @@
                             </li>
                         </ul>
                     </li>
-                    <li activenav="" active="obj.active" ng-show="user.loggedIn">
+                    <!-- <li activenav="" active="obj.active" ng-show="user.loggedIn">
                         <a href="#" >Lick section</a>
-                    </li>
-                    <li activenav="" active="obj.active" ng-show="user.loggedIn">
-                        <a href="#" >Memberships</a>
-                    </li>
+                    </li> -->
                 <ul>
             </div>
 
             <!-- Right Navbar -->
 
-            <div class="col-md-4" id="right_menu">
+            <div class="col-md-2" id="right_menu">
                 <ul class="nav navbar-nav navbar-right">
                     <li ng-class="{ active:nav.isSelected(6) }" class="hidden-xs"><a ng-click="select($index)" href="#"><img src="img/search_icon.png" alt=""/></a></li>
-                    <li ng-class="{ active:nav.isSelected(7) }" ng-show="header.user.loggedIn" class="dropdown">
+                    <li ng-class="{ active:nav.isSelected(7) }" ng-show="user.loggedIn" class="dropdown">
                         <a ng-click="select($index)" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             <img src="img/myaccount_icon.png" alt="" class="hidden-xs"/>
                         </a>

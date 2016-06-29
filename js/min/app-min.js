@@ -1,1 +1,1 @@
-!function(){angular.module("models",["pageStructure","youtubeCode","leftCategoryPanel","showHideTabs","activeNavs","mainController","loginController","appController","appLessons","ngRoute","backand"]).config(function(o){})}();
+!function(){angular.module("models",["pageStructure","youtubeCode","soundcloudCode","logIn","leftCategoryPanel","showHideTabs","activeNavs","loginController","mainController","appController","appLessons","ngRoute","backand"])}();

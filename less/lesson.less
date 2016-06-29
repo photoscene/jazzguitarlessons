@@ -23,10 +23,27 @@
         .transition(left 0.5s ease-in-out);
         .detailed-lesson {
             background-color: #fff;
+            padding: 20px;
             @media (min-width: @screen-sm-min) {
-                margin: 20px;
-                padding: 20px;
+                margin: 20px 50px;
                 .box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25));
+            }
+            button {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            button:first-child {
+                @media (min-width: @screen-sm-min) {
+                    float: left;
+                }
+            }
+            button:last-child {
+                margin-top: 15px;
+                @media (min-width: @screen-sm-min) {
+                    float: right;
+                    margin-top: 0;
+                }
             }
         }
     }
@@ -36,8 +53,19 @@
     .left-lessons.in {
         left: 0px;
     }
+    .left-lessons::before {
+        content: "";
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: -40px;
+        top: 25px;
+        background-color: @app-secondary;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
     .left-lessons {
-        left: -22%;
+        left: -25%;
         @media (min-width: @screen-sm-min) {
             /*margin-bottom: -99999px;
             padding-bottom: 99999px;*/
@@ -45,6 +73,9 @@
         .transition(left 0.5s ease-in-out);
         background-color: @app-secondary;
         position: relative;
+        > ul > li {
+            border-bottom: 1px solid rgba(255,255,255,.2);            
+        }
         ul {
             padding: 10px;
             h4 {
@@ -67,8 +98,9 @@
             color: white;
             text-shadow: none;
             position: absolute;
-            right: 10px;
-            top: 10px;
+            right: -20px;
+            top: 35px;
+            z-index: 10;
             .fa {
                 &:focus {
                     outline: none;
