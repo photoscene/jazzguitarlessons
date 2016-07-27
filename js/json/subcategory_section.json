@@ -4,7 +4,49 @@
         "active": true,
         "title": "Jazz comping for beginners",
         "description": "This is where you begin learning to build jazz chords, and how the inner voices of your chords move from chord to chord.",
-        "parent": "chords"
+        "parent": "chords",
+        "lessons": [
+            {
+                "id": 1,
+                "active": true,
+                "title": "How to learn chords",
+                "shortDescription": "This is a lesson in reharmonisation to create more movement in a chord sequence. There may also be some nice new chord voicings that you didn’t know.",
+                "description": "This is the long description",
+                "videoCode": "LDS5KUgkyYo",
+                "trackCode": "217070149",
+                "date": "05-06-2016"
+            },
+            {
+                "id": 2,
+                "active": true,
+                "title": "How to learn scales",
+                "shortDescription": "Nice little exercise to teach you some dominant 7 chord grips that you may not have played before.",
+                "description": "This is the long description of scales",
+                "videoCode": "LDS5KUgkyYo",
+                "trackCode": "217070149",
+                "date": "03-06-2016"
+            },
+            {
+                "id": 3,
+                "active": true,
+                "title": "How to learn diatonic scales",
+                "shortDescription": "This is the short description of scales",
+                "description": "This is the long description of scales",
+                "videoCode": "LDS5KUgkyYo",
+                "trackCode": "217070149",
+                "date": "03-06-2016"
+            },
+            {
+                "id": 4,
+                "active": true,
+                "title": "How to learn altering Scales",
+                "shortDescription": "This is the short description of scales",
+                "description": "This is the long description of scales",
+                "videoCode": "LDS5KUgkyYo",
+                "trackCode": "217070149",
+                "date": "03-06-2016"
+            }
+        ]
     },
     {
         "id": 2,
@@ -46,7 +88,7 @@
             {
                 "id": 4,
                 "active": true,
-                "title": "How to learn altering ccales",
+                "title": "How to learn altering Scales",
                 "shortDescription": "This is the short description of scales",
                 "description": "This is the long description of scales",
                 "videoCode": "LDS5KUgkyYo",

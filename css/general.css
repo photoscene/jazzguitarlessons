@@ -6902,8 +6902,9 @@ main {
 }
 /*Footer*/
 footer {
-  border-top: 1px solid #945aff;
-  padding-top: 32px;
+  background-color: #3c4d68;
+  padding: 32px 0;
+  color: white;
 }
 @font-face {
   font-family: 'Proxima-light';
@@ -7064,6 +7065,13 @@ a:hover {
 #lesson-list h2 {
   color: #3C4D68;
 }
+#lesson-list .search input {
+  width: 90%;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid #3c4d68;
+  padding: 10px;
+}
 #lesson_container,
 #lesson_container .lesson {
   overflow: auto;
@@ -7223,6 +7231,9 @@ button:focus {
 .mt64 {
   margin-top: 64px;
 }
+.mb0 {
+  margin-bottom: 0;
+}
 .mb32 {
   margin-bottom: 32px;
 }
@@ -7237,6 +7248,12 @@ button:focus {
   display: -webkit-flex;
   display: flex;
   flex: 1 1 auto;
+}
+@media screen and (max-width: 991px) {
+  .row-flex,
+  .row-flex > div[class*='col-'] {
+    display: block;
+  }
 }
 .row-flex-wrap {
   -webkit-flex-flow: row wrap;

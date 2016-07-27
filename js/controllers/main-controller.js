@@ -3,9 +3,9 @@
 
     .controller('mainCtrl', ['$scope', 'auth', '$location', function ($scope, auth, $location){
         //this.user = user;
-        /*$scope.user = {
+        $scope.user = {
             loggedIn: true
-        };*/
+        };
         $scope.$watch(auth.isLoggedIn, function (value, oldValue) {
 
             if(!value && oldValue) {

@@ -47,6 +47,9 @@ button {
 .mt64 {
     margin-top: 64px;
 }
+.mb0 {
+    margin-bottom: 0;
+}
 .mb32 {
     margin-bottom: 32px;
 }
@@ -61,6 +64,9 @@ button {
     display: -webkit-flex;
     display: flex;
     flex:1 1 auto;
+    @media screen and (max-width: @screen-sm-max) {
+        display: block;
+    }
 }
 
 .row-flex-wrap {

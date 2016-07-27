@@ -1,6 +1,6 @@
 (function(){
     angular.module('logIn', [])
-    .service('auth', function () {
+    .service('Auth', function () {
         var user;
 
         return {
