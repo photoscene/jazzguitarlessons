@@ -16,8 +16,8 @@
             <div ng-repeat="lesson in section.lessons | filter:searchBox" class="col-md-3">
                 <div class="panel flex-col">
                     <div class="panel-title">
-                        <h3>{{ lesson.title }}</h3>
                         <small>{{ lesson.date }}</small>
+                        <h3><a href="#/chords/{{ lesson.id }}">{{ lesson.title }}<a/></h3>
                     </div>
                     <div class="panel-body flex-grow">
                         <p>{{ lesson.shortDescription }}</p>

@@ -1,5 +1,5 @@
 (function() {
-    angular.module('models')
+    angular.module('jgl1')
     .config(function($routeProvider){
         $routeProvider
         .when('/scales', { templateUrl: '/views/templates/lesson_templates/scales.html', })

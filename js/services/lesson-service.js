@@ -1,5 +1,5 @@
 (function(){
-    angular.module('models')
+    angular.module('jgl1')
     .service('lessonService', function ($http) {
 
         getLessons = function () {

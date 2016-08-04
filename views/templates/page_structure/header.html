@@ -27,7 +27,7 @@
                     <li ng-repeat="category in mainCategories" activenav="" active="obj.active" ng-show="user.loggedIn">
                         <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{category.name}}</a>
                         <ul class="dropdown-menu">
-                            <li ng-repeat="subcategory in subCategories">
+                            <li ng-repeat="subcategory in subCategories" ng-if="subcategory.parent == category.id">
                                 <a href="#{{subcategory.url}}">{{subcategory.name}}</a>
                             </li>
                         </ul>
