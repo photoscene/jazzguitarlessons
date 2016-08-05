@@ -1,0 +1,78 @@
+[
+  {
+    "name": "users",
+    "fields": {
+      "email": {
+        "type": "string"
+      },
+      "firstName": {
+        "type": "string"
+      },
+      "lastName": {
+        "type": "string"
+      },
+      "password": {
+        "type": "string"
+      }
+    }
+  },
+  {
+    "name": "mainCategories",
+    "fields": {
+      "children": {
+        "collection": "subCategories",
+        "via": "parent"
+      },
+      "name": {
+        "type": "string"
+      },
+      "active": {
+        "type": "boolean"
+      }
+    }
+  },
+  {
+    "name": "subCategories",
+    "fields": {
+      "name": {
+        "type": "string"
+      },
+      "url": {
+        "type": "string"
+      },
+      "active": {
+        "type": "boolean"
+      },
+      "parent": {
+        "object": "mainCategories"
+      },
+      "lessons": {
+        "collection": "lessons",
+        "via": "category"
+      }
+    }
+  },
+  {
+    "name": "lessons",
+    "fields": {
+      "title": {
+        "type": "text"
+      },
+      "description": {
+        "type": "text"
+      },
+      "dateOfCreation": {
+        "type": "datetime"
+      },
+      "youtubeVideoCode": {
+        "type": "string"
+      },
+      "lessonUrl": {
+        "type": "string"
+      },
+      "category": {
+        "object": "subCategories"
+      }
+    }
+  }
+]

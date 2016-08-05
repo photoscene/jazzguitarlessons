@@ -1,4 +1,4 @@
-<div id="lesson-list">
+<div id="lesson-list" ng-controller="navCtrl as nav">
     <!-- <p ng-show="main.user.loggedIn">
     This is the chords sectionasd
     </p> -->
@@ -7,13 +7,13 @@
             <input ng-model="searchBox.title" class="center-block mt32" placeholder="Search in Lessons" />
         </div>
     </div>
-    <div ng-repeat="section in categorySections">
+    <div ng-repeat="section in categorySections" ng-if="section.category == subCategories[0].id"  ng-controller="lessonCtrl as lesson">
         <div class="lesson-section col-md-12">
             <h2>{{ section.title }}</h2>
             <p>{{ section.description }}</p>
         </div>
         <div class="row-flex row-flex-wrap col-md-12">
-            <div ng-repeat="lesson in section.lessons | filter:searchBox" class="col-md-3">
+            <div ng-repeat="lesson in lessons | filter:searchBox" ng-if="lesson.parentSection == section.id" class="col-md-3">
                 <div class="panel flex-col">
                     <div class="panel-title">
                         <small>{{ lesson.date }}</small>

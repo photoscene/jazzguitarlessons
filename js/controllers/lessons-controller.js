@@ -1,13 +1,13 @@
 (function(){
     angular.module('appLessons', ['backand'])
 
-    .controller('lessonCtrl', function($scope, lessonService, $routeParams){ //, Backand,
+    .controller('lessonCtrl', function($scope, lessonService, lessonSectionService, $routeParams){ //, Backand,
         $scope.lessons = [];
-        $scope.lesson = [];
+        //$scope.lesson = [];
         $scope.categorySections = [];
         $scope.selected = 0;
 
-        lessonService.getLessons()
+        /*lessonService.getLessons()
         .then(function(result) {
             $scope.lessons = result.data;
         });
@@ -17,12 +17,24 @@
             $scope.lesson = result.data;
             $scope.code = $scope.lesson.videoCode;
             $scope.soundCloudCode = $scope.lesson.trackCode;
-        });
+        });*/
 
-        lessonService.getCategorySections()
-        .then(function(result) {
-            $scope.categorySections = result.data;
-        });
+        function getAllLessons() {
+            lessonService.getLessons()
+            .then(function(result) {
+                $scope.lessons = result.data.data;
+            }); 
+        }
+
+        function getAllLessonSections() {
+            lessonSectionService.getLessonSections()
+            .then(function(result) {
+                $scope.categorySections = result.data.data;
+            }); 
+        }
+
+        getAllLessonSections();
+        getAllLessons();
 
         $scope.select= function(index) {
            $scope.selected = index; 
