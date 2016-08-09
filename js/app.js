@@ -7,9 +7,10 @@
         'leftCategoryPanel', 
         'showHideTabs',
         'activeNavs',
-        'loginController',
+        //'loginController',
         'mainController',
         'appController',
+        'facebookLogIn',
         'appLessons',
         'ngRoute',
         'backand'

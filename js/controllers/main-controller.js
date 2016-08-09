@@ -1,23 +1,24 @@
 (function(){
     angular.module('mainController', ['backand'])
 
-    .controller('mainCtrl', ['$scope', 'auth', '$location', function ($scope, auth, $location){
-        //this.user = user;
-        $scope.user = {
-            loggedIn: true
-        };
-        $scope.$watch(auth.isLoggedIn, function (value, oldValue) {
+    .controller('mainCtrl', function($rootScope, $scope, facebookUser) {
+    $rootScope.loggedInUser = {};
 
-            if(!value && oldValue) {
-              console.log("Disconnect");
-              $location.path('/login');
-            }
-
-            if(value) {
-              console.log("Connect");
-              //Do something when the user is connected
-            }
+    $rootScope.$on('fbLoginSuccess', function(name, response) {
+      facebookUser.then(function(user) {
+        user.api('/me').then(function(response) {
+          $rootScope.loggedInUser = response;
+          console.log($rootScope.loggedInUser);
         });
-    }]);
+      });
+    });
+
+    $rootScope.$on('fbLogoutSuccess', function() {
+      $scope.$apply(function() {
+        $rootScope.loggedInUser = {};
+      });
+    });
+  });
+
 
 })();

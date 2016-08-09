@@ -1,5 +1,5 @@
 (function(){
-    angular.module('loginController', [])
+    /*angular.module('loginController', [])
 
     .controller('loginCtrl', ['$scope', 'auth', function ($scope, auth) {
         $scope.userdetails={};
@@ -23,6 +23,6 @@
             });
 
         };
-    }])
+    }])*/
 
 })();

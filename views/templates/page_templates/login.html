@@ -1,4 +1,66 @@
-<div id="login-form" class="col-md-6 col-md-offset-3 mt32" ng-controller="loginCtrl">
+<div id="fb-root"></div>
+
+<script>
+
+    /*function statusChangeCallback(response) {
+        console.log('statusChangeCallback');
+        console.log(response);
+        if (response.status === 'connected') {
+            testAPI();
+        } else if (response.status === 'not_authorized') {
+            document.getElementById('status').innerHTML = 'Please log ' +
+            'into this app.';
+        } else {
+            document.getElementById('status').innerHTML = 'Please log ' +
+            'into Facebook.';
+        }
+    }
+
+    function checkLoginState() {
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+        });
+    }
+
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '1256806504343777',
+            xfbml      : true,
+            version    : 'v2.7'
+        });
+
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+        });
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    function testAPI() {
+        console.log('Welcome!  Fetching your information.... ');
+        FB.api('/me', function(response) {
+            console.log('Successful login for: ' + response.name);
+            document.getElementById('status').innerHTML = 'Thanks for logging in, ' + response.name + '!';
+        });
+    }*/
+
+/*(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/hu_HU/sdk.js#xfbml=1&version=v2.7&appId=1256806504343777";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));*/
+
+</script>
+
+<div id="login-form" class="col-md-6 col-md-offset-3 mt32"> <!-- ng-controller="loginCtrl" -->
 
     <ul class="nav nav-tabs">
         <li role="presentation" class="active">
@@ -10,29 +72,11 @@
     </ul>
 
     <div class="tab-content">
-        
-        <div role="tabpanel" class="tab-pane" id="login">
-            
-            <h2 class="text-center">Sign in</h2>
-            <form action="/" method="post" name="userdetails.form">
-                <div class="top-row">
-                    <div class="field-wrap">
-                        <label>Email Address<span class="req">*</span>
-                        </label>
-                        <input type="email" ng-model="userdetails.userName" required autocomplete="off"/>
-                    </div>
-                    <div class="field-wrap">
-                        <label>Password<span class="req">*</span>
-                        </label>
-                        <input type="password" ng-model="userdetails.password" required autocomplete="off"/>
-                    </div>
-                </div>
-                <div class="click" ng-click="login()">click me</div>
-                <button id="login-btn" type="submit" class="btn btn-primary center-block">Log In</button>
-            </form>
 
+        <div id="status">
         </div>
-        <div role="tabpanel" class="tab-pane active" id="signup">
+        
+        <div role="tabpanel" class="tab-pane" id="signup">
 
             <h2 class="text-center">Please log in first.</h2>
             <form action="/" method="post">
@@ -63,6 +107,32 @@
             
         </div>
 
+        <div role="tabpanel" class="tab-pane active" id="login">
+            
+            <h2 class="text-center">Sign in</h2>
+            <form action="/" method="post" name="userdetails.form">
+                <div class="top-row">
+                    <div class="field-wrap">
+                        <label>Email Address<span class="req">*</span>
+                        </label>
+                        <input type="email" ng-model="userdetails.userName" required autocomplete="off"/>
+                    </div>
+                    <div class="field-wrap">
+                        <label>Password<span class="req">*</span>
+                        </label>
+                        <input type="password" ng-model="userdetails.password" required autocomplete="off"/>
+                    </div>
+                </div>
+                <button id="login-btn" type="submit" class="btn btn-primary center-block">Log In</button>
+            </form>
+
+        </div>
+
+        <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button> -->
+
+        <facebook-login-button></facebook-login-button>
+
     </div>
+
 
 </div>

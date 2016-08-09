@@ -1,6 +1,6 @@
 (function(){
     angular.module('jgl1')
-    .service('lessonService', function ($http, Backand) {
+    .service('lessonService', function ($http, Backand, $routeParams) {
         var baseUrl = '/1/objects/';
         var objectName = 'lessons';
 
@@ -12,24 +12,21 @@
             return $http.get(getUrlLessons());
         };
 
-        /*getLessons = function () {
-            return $http.get('/js/json/lessons.json');
-        };*/
-
-        /*getLesson = function (lessonId) {
-            return $http.get('/js/json/lesson-' + lessonId + '.json');
-        };*/
+        getLesson = function (lessonId) {
+            return Backand.getApiUrl() + '/1/objects/lessons/' + 'lessonId';
+        };
 
         return {
-            getLessons: getLessons
-            //getLesson: getLesson
+            getLessons: getLessons,
+            getLesson: getLesson
         }
     })
     .service('lessonSectionService', function ($http, Backand) {
         var baseUrl = '/1/objects/';
         var objectName = 'lessonSections';
 
-        /*Maincategories*/
+        /* Lesson Sections */
+        
         function getUrlLessonSections () {
             return Backand.getApiUrl() + baseUrl + objectName;
         };

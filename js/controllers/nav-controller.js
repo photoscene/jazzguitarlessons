@@ -1,7 +1,7 @@
 (function(){
     angular.module('appController', ['backand', 'categoryServices'])
 
-    .controller('navCtrl', function($scope, $rootScope, categoryService, navService, $routeParams){
+    .controller('navCtrl', function($scope, categoryService, navService, $routeParams){
 
         $scope.mainCategories = [];
         $scope.subCategories = [];
