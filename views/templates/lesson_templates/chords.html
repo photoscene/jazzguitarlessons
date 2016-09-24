@@ -4,7 +4,7 @@
     </p> -->
     <div class="col-md-12">
         <div class="search center-block">
-            <input ng-model="searchBox.title" class="center-block mt32" placeholder="Search in Lessons" />
+            <input ng-model="searchBox.title" class="center-block mt32 form-control" placeholder="Search in Lessons" />
         </div>
     </div>
     <div ng-repeat="section in categorySections" ng-if="section.category == subCategories[0].id" ng-controller="lessonCtrl as lesson">

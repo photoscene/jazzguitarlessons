@@ -1,8 +1,8 @@
 <div id="lesson_container">
     <div class="lesson">
-        <lesson-category-panel class="col-md-3 left-lessons in hidden-sm hidden-xs" ng-controller="lessonCtrl"></lesson-category-panel>
+        <lesson-category-panel class="col-md-3 left-lessons in hidden-sm hidden-xs" ng-controller="lessonCtrl as lesson"></lesson-category-panel>
         <div class="col-md-9">
-            <div class="detailed-lesson">
+            <div class="detailed-lesson" ng-controller="lessonDetailCtrl as currentLesson">
                 <div class="row">
                     <div class="col-md-12">
                         <button class="btn btn-secondary">Previous lesson</button>
@@ -11,9 +11,9 @@
                 </div>
 
                 <!-- <h2><pre>{{ lesson | json }}</pre></h2> -->
-                <h2>{{ lesson.title }}</h2>
-                <p>{{lesson.description}}</p>
-                <div>{{lesson.videoIframe}}</div>
+                <h2>{{ currentLesson.title }}</h2>
+                <p>{{currentLesson.description}}</p>
+                <div>{{currentLesson.videoIframe}}</div>
                 <div lesson-youtube code="code"></div>
                 <track-soundcloud></track-soundcloud>
             </div>

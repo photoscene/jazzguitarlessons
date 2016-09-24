@@ -1,5 +1,5 @@
 (function(){
-    angular.module('jgl1')
+    angular.module('services')
     .service('lessonService', function ($http, Backand, $routeParams) {
         var baseUrl = '/1/objects/';
         var objectName = 'lessons';
@@ -12,12 +12,17 @@
             return $http.get(getUrlLessons());
         };
 
-        getLesson = function (lessonId) {
-            return Backand.getApiUrl() + '/1/objects/lessons/' + 'lessonId';
-        };
 
         return {
-            getLessons: getLessons,
+            getLessons: getLessons
+            //getLesson: getLesson
+        }
+    })
+    .service('lessonDetailService', function ($http, Backand) {
+        var getLesson = function (id) {
+            return $http.get(Backand.getApiUrl() + '/1/objects/lessons/' + id);
+        };
+        return {
             getLesson: getLesson
         }
     })

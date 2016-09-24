@@ -1,68 +1,12 @@
 <div id="fb-root"></div>
 
-<script>
+<div id="login-form" class="col-md-6 col-md-offset-3 mt32">
 
-    /*function statusChangeCallback(response) {
-        console.log('statusChangeCallback');
-        console.log(response);
-        if (response.status === 'connected') {
-            testAPI();
-        } else if (response.status === 'not_authorized') {
-            document.getElementById('status').innerHTML = 'Please log ' +
-            'into this app.';
-        } else {
-            document.getElementById('status').innerHTML = 'Please log ' +
-            'into Facebook.';
-        }
-    }
+    <h1 class="text-center">Login in With Your Social Media Account</h1>
 
-    function checkLoginState() {
-        FB.getLoginStatus(function(response) {
-            statusChangeCallback(response);
-        });
-    }
+    <facebook-login-button class="mt64 text-center"></facebook-login-button>
 
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId      : '1256806504343777',
-            xfbml      : true,
-            version    : 'v2.7'
-        });
-
-        FB.getLoginStatus(function(response) {
-            statusChangeCallback(response);
-        });
-    };
-
-    (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
-    function testAPI() {
-        console.log('Welcome!  Fetching your information.... ');
-        FB.api('/me', function(response) {
-            console.log('Successful login for: ' + response.name);
-            document.getElementById('status').innerHTML = 'Thanks for logging in, ' + response.name + '!';
-        });
-    }*/
-
-/*(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/hu_HU/sdk.js#xfbml=1&version=v2.7&appId=1256806504343777";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));*/
-
-</script>
-
-<div id="login-form" class="col-md-6 col-md-offset-3 mt32"> <!-- ng-controller="loginCtrl" -->
-
-    <ul class="nav nav-tabs">
+    <!-- <ul class="nav nav-tabs">
         <li role="presentation" class="active">
             <a showtab="" href="/#login" aria-controls="login" role="tab" data-toggle="tab">Log In</a>
         </li>
@@ -128,11 +72,6 @@
 
         </div>
 
-        <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button> -->
-
-        <facebook-login-button></facebook-login-button>
-
-    </div>
-
+    </div> -->
 
 </div>

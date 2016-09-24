@@ -1,1 +1,0 @@
-!function(){angular.module("showHideTabs",[]).directive("showtab",function(){return{restrict:"EA",link:function(n,t,i){t.click(function(n){n.preventDefault(),$(t).tab("show")})}}})}();

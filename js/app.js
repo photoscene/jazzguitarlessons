@@ -3,15 +3,13 @@
         'pageStructure',
         'youtubeCode',
         'soundcloudCode',
-        'logIn',
         'leftCategoryPanel', 
         'showHideTabs',
         'activeNavs',
-        //'loginController',
         'mainController',
         'appController',
         'facebookLogIn',
-        'appLessons',
+        'controllers',
         'ngRoute',
         'backand'
          ])

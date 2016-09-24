@@ -1,0 +1,67 @@
+.s_discount {
+    position: relative;
+    text-transform: uppercase;
+
+    .col-md-4:nth-child(2) {
+        background-color: @app-primary;
+        @media (min-width: @screen-md-min) {
+            height: 120%;
+            position: absolute;
+            left: 33.33%;
+            top: -56px;
+        }
+
+        .s_discount_box {
+            @media (min-width: @screen-md-min) {
+                top: 10%;
+            }
+        }
+    }
+    .col-md-4:last-child {
+        @media (min-width: @screen-md-min) {
+            float: right;
+        }
+    }
+}
+.s_discount_box {
+    position: relative;
+    word-wrap: break-word;
+    color: #fff;
+    @media (max-width: @screen-sm-min) {
+        text-align: center;
+    }
+    .col-md-7 {
+        @media (min-width: @screen-md-min) {
+            border-left: 1px dotted rgba(255, 255, 255, 0.6);
+            padding-left: 45px;
+        }
+    }
+}
+
+.s_discount_amount {
+    min-height: 100px;
+    position: relative;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 15px;
+    .currency {
+        font-size: 35px;
+    }
+    .h1 {
+        @media (min-width: @screen-md-min) {
+            font-size: 45px;
+        }
+        @media (min-width: @screen-lg-min) {
+            font-size: 70px;
+        }
+        line-height: 0.7;
+    }
+    > p {
+        font-family: 'Proxima-bold';
+    }
+}
+
+.s_discount_type {
+    font-size: 20px;
+    letter-spacing: 1px;
+}

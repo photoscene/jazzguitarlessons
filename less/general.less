@@ -2,45 +2,55 @@
 
 ///////// General styles ///////////
 
-button {
-    &:focus {
-        outline: none;
-    }
+.badge {
+    background-color: @color-secondary;
+    font-size: 10px;
 }
 .btn {
     border-radius: 0px;
-    padding: 15px 50px;
     font-size: 25px;
     text-transform: uppercase;
     font-weight: 300;
+    @media (min-width: @screen-lg-min) {
+        padding: 15px 50px;
+    }
 }
 .btn-primary {
     background-color: transparent;
     border-color: white;
     color: @active-color;
+    .transition(all 0.2s linear);
     &:hover {
         background-color: transparent;
+        border-color: @active-color;
     }
 }
 .btn-secondary {
     background-color: transparent;
     border-color: @app-secondary;
     color: @gray-light;
+    .transition(all 0.2s linear);
     &:hover {
         background-color: transparent;
     }
 }
 .btn-success {
-    background-color: transparent;
-    border-color: @app-secondary;
-    color: @active-color;
+    background-color: @active-color;
+    border-color: transparent;
+    color: white;
+    .transition(all 0.2s linear);
     &:hover {
-        background-color: transparent;
-        border-color: @app-secondary;
-        color: darken(@active-color, 15%);
+        border-color: transparent;
+        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+        background-color: darken(@active-color, 10%);
     }
 }
-
+.mt0 {
+    margin-top: 0;
+}
+.mt16 {
+    margin-top: 16px;
+}
 .mt32 {
     margin-top: 32px;
 }
@@ -49,6 +59,9 @@ button {
 }
 .mb0 {
     margin-bottom: 0;
+}
+.mb16 {
+    margin-bottom: 16px;
 }
 .mb32 {
     margin-bottom: 32px;
@@ -97,7 +110,13 @@ button {
 }
 
 ///////// Page Elements ///////////
-
+.dl-horizontal dt {
+    width: 40px;
+    text-align: left;
+}
+.dl-horizontal dd {
+    margin-left: 50px;
+}
 .panel {
     .panel-title {
         padding: 5px 15px 0 15px;
@@ -117,4 +136,46 @@ button {
     border-radius: 0;
     border: none;
     .box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25));
+}
+/*FORM, INPUT, BUTTON*/
+.form-control {
+    border-radius: 0;
+    box-shadow: none;
+    height: 45px;
+    border: none;
+    border-bottom: 2px solid @app-secondary;
+    &:focus {
+        box-shadow: none;
+        border-color: @app-primary;
+    }
+}
+.input-group-addon {
+    background-color: transparent;
+    border: none;
+}
+.form-control:focus::-webkit-input-placeholder {
+    color: @app-primary;
+}
+label {
+    font-weight: 300;
+}
+button {
+    &:focus {
+        outline: none;
+    }
+}
+/*MODAL*/
+.modal-content {
+    border-radius: 0;
+    .modal-header, .modal-footer {
+        border: none;
+    }
+    .modal-header {
+        h2 {
+            text-transform: uppercase;
+        }
+    }
+    .modal-footer {
+        padding: 0;
+    }
 }

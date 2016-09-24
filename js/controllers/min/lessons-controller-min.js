@@ -1,0 +1,1 @@
+!function(){angular.module("controllers",["backand"]).controller("lessonCtrl",function(n,e,t,o){function s(){e.getLessons().then(function(e){n.lessons=e.data.data})}function c(){t.getLessonSections().then(function(e){n.categorySections=e.data.data})}n.lessons=[],n.lesson=[],n.categorySections=[],n.selected=0,c(),s(),n.select=function(e){n.selected=e}})}();

@@ -1,9 +1,9 @@
 (function(){
-    angular.module('appLessons', ['backand'])
+    angular.module('controllers', ['backand'])
 
     .controller('lessonCtrl', function($scope, lessonService, lessonSectionService, $routeParams){
         $scope.lessons = [];
-        $scope.lesson = [];
+        
         $scope.categorySections = [];
         $scope.selected = 0;
 
@@ -14,15 +14,6 @@
             }); 
         }
 
-        /*function getCurrentLessons() {
-            lessonService.getLesson($routeParams.id)
-            .then(function(result) {
-                $scope.lesson = result.data.data;
-                $scope.code = $scope.lesson.videoCode;
-                $scope.soundCloudCode = $scope.lesson.trackCode;
-            }); 
-        }*/
-
         function getAllLessonSections() {
             lessonSectionService.getLessonSections()
             .then(function(result) {
@@ -32,11 +23,28 @@
 
         getAllLessonSections();
         getAllLessons();
-        //getCurrentLessons();
 
         $scope.select= function(index) {
            $scope.selected = index; 
         };
-    });
+    })
+
+    .controller('lessonDetailCtrl', function($scope, $routeParams, lessonDetailService) {
+        $scope.lesson = [];
+
+        function getCurrentLesson() {
+            lessonDetailService
+                .getLesson($routeParams.id)
+                .then(function(result) {
+                    $scope.lesson = result.data;
+                    $scope.code = $scope.lesson.youtubeVideoCode;
+                });
+        }
+        
+        getCurrentLesson();
+        
+        console.log($routeParams.id);
+
+    })
 
 })();

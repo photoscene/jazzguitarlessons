@@ -18,13 +18,11 @@
             <div class="col-md-10" id="top_menu" ng-init="obj = {}">
                 <ul class="nav navbar-nav">
                     <li><a href="#/"><img src="img/home_icon.png" alt=""/></a></li>
-                    <li activenav="" active="obj.active"><a href="#/">Why it works?</a></li>
-                    <li activenav="" active="obj.active"><a href="#/">Pricing</a></li>
-                    <li activenav="" active="obj.active"><a href="#/">Free trial</a></li>
-                    <li activenav="" active="obj.active">
-                        <a href="#" >Memberships</a>
-                    </li>
-                    <li ng-repeat="category in mainCategories" activenav="" active="obj.active" ng-show="user.loggedIn">
+                    <li activenav="" active="obj.active"><a href="#/">Why it works</a></li>
+                    <li activenav="" active="obj.active"><a href="#/pricing">Pricing</a></li>
+                    <li activenav="" active="obj.active"><a href="#/">Free lessons</a></li>
+                    <!-- <li activenav="" active="obj.active"><a href="#/">FAQ</a></li> -->
+                    <li ng-repeat="category in mainCategories" activenav="" active="obj.active" ng-show="loggedInUser.status">
                         <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{category.name}}</a>
                         <ul class="dropdown-menu">
                             <li ng-repeat="subcategory in subCategories" ng-if="subcategory.parent == category.id">
@@ -55,6 +53,16 @@
                     <li ng-class="{ active:nav.isSelected(8) }">
                         <a href="#" ng-click="nav.selectNav(8)">
                             <img src="img/contact_icon.png" alt=""/>
+                        </a>
+                    </li>
+                    <li ng-class="{ active:nav.isSelected(9) }">
+                        <a href="#" type="button" data-toggle="modal" data-target="#loginModal" ng-click="nav.selectNav(9)">
+                            Log In
+                        </a>
+                    </li>
+                    <li ng-class="{ active:nav.isSelected(10) }">
+                        <a href="#" type="button" data-toggle="modal" data-target="#myModal" ng-click="nav.selectNav(10)">
+                            Sign Up
                         </a>
                     </li>
                 </ul>

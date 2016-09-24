@@ -1,11 +1,14 @@
 (function(){
-    angular.module('appController', ['backand', 'categoryServices'])
+    angular.module('appController', ['backand', 'services', 'app.factory'])
 
-    .controller('navCtrl', function($scope, categoryService, navService, $routeParams){
+    .controller('navCtrl', function(loginFactory, $scope, categoryService, navService, $routeParams){
 
         $scope.mainCategories = [];
         $scope.subCategories = [];
-
+        $scope.loggedInUser = {
+            status: loginFactory.getFacebookStatus()
+        };
+        
         function getAllMainCategories() {
             navService.getMainCategories()
                 .then(function (result) {
@@ -23,15 +26,6 @@
         };
 
         getAllSubCategories();
-
-        /*categoryService.getMainCategories()
-        .then(function(result) {
-            $scope.mainCategories = result.data;
-        });*/
-        /*categoryService.getSubCategories($routeParams.parent)
-        .then(function(result) {
-            $scope.subCategories = result.data;
-        });*/
 
     });
 

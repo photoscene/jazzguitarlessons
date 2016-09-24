@@ -1,1 +1,0 @@
-!function(){angular.module("activeNavs",[]).directive("activenav",function(){return{restrict:"EA",replace:!0,transclude:!0,scope:{active:"="},link:function(e,c,n){}}})}();
