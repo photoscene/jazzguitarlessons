@@ -1,8 +1,18 @@
+@blog_font-size: 14px;
+@blog_line-height: 1.4;
+@blog_desc-to-show: 4;
+
 #lesson-list {
     position: relative;
     .lesson-section {
         @media (min-width: @screen-md-min) {
             padding-left: 85px;
+        }
+        p {
+            height: @blog_font-size*@blog_line-height*@blog_desc-to-show;
+            font-size: @blog_font-size;
+            line-height: @blog_line-height;
+            -webkit-line-clamp: @blog_desc-to-show;
         }
     }
     .col-md-12, .col-md-3 {
@@ -13,12 +23,7 @@
     }
     .search input {
         width: 90%;
-        height: 50px;
-        background-color: transparent;
-        border: 1px solid #3c4d68;
-        padding: 10px;
         font-size: 20px;
-        font-weight: 200;
     }
 }
 #lesson_container, #lesson_container .lesson {
@@ -38,7 +43,6 @@
                 .box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25));
             }
             button {
-                display: block;
                 margin-left: auto;
                 margin-right: auto;
             }
@@ -48,11 +52,7 @@
                 }
             }
             button:last-child {
-                margin-top: 15px;
-                @media (min-width: @screen-sm-min) {
-                    float: right;
-                    margin-top: 0;
-                }
+                float: right;
             }
         }
     }

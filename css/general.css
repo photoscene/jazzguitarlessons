@@ -7193,6 +7193,12 @@ a:hover {
     padding-left: 85px;
   }
 }
+#lesson-list .lesson-section p {
+  height: 78.4px;
+  font-size: 14px;
+  line-height: 1.4;
+  -webkit-line-clamp: 4;
+}
 #lesson-list .col-md-12,
 #lesson-list .col-md-3 {
   background-color: #f0f6fd;
@@ -7203,12 +7209,7 @@ a:hover {
 }
 #lesson-list .search input {
   width: 90%;
-  height: 50px;
-  background-color: transparent;
-  border: 1px solid #3c4d68;
-  padding: 10px;
   font-size: 20px;
-  font-weight: 200;
 }
 #lesson_container,
 #lesson_container .lesson {
@@ -7236,7 +7237,6 @@ a:hover {
   }
 }
 #lesson_container .col-md-9 .detailed-lesson button {
-  display: block;
   margin-left: auto;
   margin-right: auto;
 }
@@ -7246,13 +7246,7 @@ a:hover {
   }
 }
 #lesson_container .col-md-9 .detailed-lesson button:last-child {
-  margin-top: 15px;
-}
-@media (min-width: 768px) {
-  #lesson_container .col-md-9 .detailed-lesson button:last-child {
-    float: right;
-    margin-top: 0;
-  }
+  float: right;
 }
 #lesson_container .lesson {
   display: inline-flex;
@@ -7333,9 +7327,13 @@ a:hover {
 }
 .btn {
   border-radius: 0px;
-  font-size: 25px;
   text-transform: uppercase;
   font-weight: 300;
+}
+@media (min-width: 768px) {
+  .btn {
+    font-size: 25px;
+  }
 }
 @media (min-width: 1200px) {
   .btn {
@@ -7477,6 +7475,7 @@ a:hover {
   height: 45px;
   border: none;
   border-bottom: 2px solid #3C4D68;
+  background-color: transparent;
 }
 .form-control:focus {
   box-shadow: none;
